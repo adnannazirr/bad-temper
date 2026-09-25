@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Bad Temper — Hot Mat Pilates, Staten Island</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,300..900;1,62..125,300..900&amp;family=Instrument+Serif:ital@0;1&amp;display=swap">
+<link rel="stylesheet" href="_ds/modernist-fefd3ae8-1d78-4423-8f38-3ac89e5694c1/styles.css">
+<script src="_ds/modernist-fefd3ae8-1d78-4423-8f38-3ac89e5694c1/_ds_bundle.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="./image-slot.js"></script>
+<style>
+html,body{margin:0;background:#f3f2f2;color:#201e1d;-webkit-font-smoothing:antialiased}
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+a{color:inherit;text-decoration:none}
+a:hover{color:var(--color-accent)}
+*:focus-visible{outline:2px solid var(--color-accent);outline-offset:2px}
+::selection{background:var(--color-accent-200);color:var(--color-accent-900)}
+p,blockquote,figcaption,li,label{text-wrap:pretty}
+h1,h2,h3,h4{text-wrap:balance}
+@media (max-width:1100px){[data-t~="stack"]{grid-template-columns:minmax(0,1fr)!important;gap:32px!important}[data-t~="stack"] > [role="tablist"]{justify-self:start}}
+@media (max-width:900px){
+[data-m~="form2"]{grid-template-columns:minmax(0,1fr)!important}
+[data-m~="stack"]{grid-template-columns:minmax(0,1fr)!important}
+[data-m~="two"]{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+[data-m~="pad"]{padding:96px 20px 80px!important}
+[data-m~="cpad"]{padding:72px 20px 24px!important}
+[data-m~="hide"]{display:none!important}
+[data-m~="show"]{display:flex!important}
+[data-m~="col"]{flex-direction:column!important;align-items:flex-start!important}
+[data-m~="full"]{grid-column:1 / -1!important;padding-top:0!important}
+[data-m~="gap"]{gap:28px!important}
+[data-m~="inset"]{left:20px!important;right:20px!important;bottom:20px!important}
+[data-m~="mb"]{margin-bottom:40px!important}
+[data-m~="nav"]{top:12px!important;left:12px!important;right:12px!important;height:60px!important;padding:0 8px 0 14px!important}
+[data-m~="navlogo"]{height:36px!important}
+[data-m~="eyebrow"]{top:96px!important;left:20px!important;right:20px!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:14px!important;font-size:10px!important}
+[data-m~="hero"]{height:calc(100svh - 24px)!important;min-height:680px!important}
+[data-m~="strip"]{grid-template-columns:minmax(0,1fr)!important;gap:18px!important;padding:24px!important}
+[data-m~="aboutsmall"]{left:auto!important;right:14px!important;bottom:-48px!important;width:140px!important;height:180px!important}
+[data-m~="fmtrow"]{grid-template-columns:32px minmax(0,1fr) 44px!important;gap:10px!important}
+[data-m~="arrow"]{width:44px!important;height:44px!important}
+[data-m~="hsec"]{height:auto!important;min-height:0!important;display:block!important;padding:96px 0 80px!important}
+[data-m~="htrack"]{flex-direction:column!important;width:auto!important;padding:0 20px!important;transform:none!important}
+[data-m~="hintro"]{width:auto!important;gap:32px!important}
+[data-m~="hcard"]{width:auto!important;height:auto!important;min-height:0!important;max-height:none!important;grid-template-columns:minmax(0,1fr)!important}
+[data-m~="hcardimg"]{height:340px!important}
+[data-m~="hcardbody"]{padding:28px 22px!important}
+[data-m~="hcardbody"] h3{white-space:normal!important}
+[data-m~="memrow"]{grid-template-columns:minmax(0,1fr) auto!important;gap:16px!important;padding:22px 8px!important}
+[data-m~="tabs"]{width:100%!important;overflow-x:auto!important}
+[data-m~="tabs"] button{flex:1 0 auto!important;padding:0 14px!important}
+[data-m~="card"]{padding:28px 22px!important}
+[data-m~="book"]{min-height:0!important;gap:40px!important}
+[data-m~="final"]{height:auto!important;min-height:760px!important}
+[data-m~="footer"]{padding:72px 20px 24px!important;min-height:720px!important}
+[data-m~="map"]{height:300px!important}
+[data-m~="igrid"]{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+[data-m~="igrid"] > *:nth-child(5){display:none!important}
+[data-fs="dx"]{font-size:clamp(72px,22vw,120px)!important}
+[data-fs="d1"]{font-size:clamp(56px,16vw,88px)!important}
+[data-fs="d2"]{font-size:clamp(44px,12vw,64px)!important}
+[data-fs="d3"]{font-size:clamp(32px,9vw,44px)!important}
+[data-fs="d4"]{font-size:26px!important}
+[data-fs="p"]{font-size:17px!important}
+[data-fs="price"]{font-size:96px!important}
+[data-fs="mq"]{font-size:64px!important}
+[data-fs="mem"]{font-size:26px!important}
+[data-fs="memprice"]{font-size:52px!important}
+[data-mh="s"]{height:300px!important;min-height:0!important}
+[data-mh="m"]{height:440px!important;min-height:0!important}
+[data-mh="l"]{height:540px!important;min-height:0!important}
+[data-mh="auto"]{height:auto!important;min-height:0!important}
+}
+@media (max-width:900px),(hover:none){[data-cursor],[data-cursor-ring]{display:none!important}}
+</style>
+</helmet>
+
+<div ref="{{ rootRef }}" style="position:relative;font-family:var(--font-body);background:#f3f2f2;color:#201e1d;overflow-x:clip">
+
+<div data-preloader="" style="position:fixed;inset:0;z-index:100;background:#0b0a0a;color:#f3f2f2;clip-path:inset(0 0 0 0);display:flex;flex-direction:column;justify-content:space-between;padding:48px">
+  <div style="display:flex;justify-content:space-between;font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;opacity:.6">
+    <span>Hot Mat Pilates</span><span>Staten Island, NY</span>
+  </div>
+  <div style="display:flex;justify-content:space-between;align-items:flex-end;gap:48px">
+    <img data-pre-logo="" src="assets/logo-dark.png" alt="Bad Temper" style="width:min(620px,60vw);height:auto;display:block">
+    <span data-pre-num="" style="font-family:var(--font-heading);font-stretch:62%;font-weight:800;font-size:160px;line-height:.8;color:var(--color-accent)">000</span>
+  </div>
+</div>
+
+<div data-cursor="" style="position:fixed;left:0;top:0;width:8px;height:8px;border-radius:50%;background:var(--color-accent);z-index:120;pointer-events:none;opacity:0"></div>
+<div data-cursor-ring="" style="position:fixed;left:0;top:0;width:38px;height:38px;border-radius:50%;border:1px solid var(--color-accent);z-index:120;pointer-events:none;opacity:0"></div>
+
+<header data-nav="" data-m="nav" style="position:fixed;top:24px;left:36px;right:36px;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:24px;height:68px;padding:0 10px 0 20px;border-radius:5px;background:rgba(15,14,14,.62);backdrop-filter:blur(18px) saturate(1.4);-webkit-backdrop-filter:blur(18px) saturate(1.4);border:1px solid rgba(243,242,242,.1);color:#f3f2f2">
+  <a href="#top" aria-label="Bad Temper home" style="display:flex;align-items:center"><img data-m="navlogo" src="assets/logo-dark.png" alt="Bad Temper" style="height:46px;width:auto;display:block"></a>
+  <nav data-m="hide" style="display:flex;gap:30px;font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase">
+    <a href="#top" style="color:#f3f2f2" style-hover="color:var(--color-accent-400)">Home</a>
+    <a href="#about" style="color:#f3f2f2" style-hover="color:var(--color-accent-400)">About</a>
+    <a href="#classes" style="color:#f3f2f2" style-hover="color:var(--color-accent-400)">Classes</a>
+    <a href="#memberships" style="color:#f3f2f2" style-hover="color:var(--color-accent-400)">Membership</a>
+    <a href="#social" style="color:#f3f2f2" style-hover="color:var(--color-accent-400)">Gallery</a>
+    <a href="#studio" style="color:#f3f2f2" style-hover="color:var(--color-accent-400)">Contact</a>
+    <a href="#booking" style="color:#f3f2f2" style-hover="color:var(--color-accent-400)">Booking</a>
+  </nav>
+  <div style="display:flex;gap:8px;align-items:center">
+    <a href="#booking" data-magnetic="" style="display:inline-flex;align-items:center;justify-content:space-between;gap:28px;height:48px;padding:0 16px 0 20px;border-radius:5px;background:linear-gradient(110deg,var(--color-accent-500) 0%,var(--color-accent) 40%,var(--color-accent-700) 100%);background-size:180% 100%;background-position:0% 0;color:#fff;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;box-shadow:0 10px 26px -12px rgba(236,48,19,.8),inset 0 1px 0 rgba(255,255,255,.28);transition:background-position .6s" style-hover="background-position:100% 0;color:#fff">
+      Book now<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg>
+    </a>
+    <button data-m="show" aria-label="Open menu" onClick="{{ openMenu }}" style="display:none;appearance:none;cursor:pointer;width:48px;height:48px;border-radius:5px;align-items:center;justify-content:center;background:linear-gradient(110deg,rgba(255,255,255,.14),rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.18);color:#f3f2f2"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h16"></path><path d="M4 16h16"></path></svg></button>
+  </div>
+</header>
+
+<sc-if value="{{ menuOpen }}">
+  <div style="position:fixed;inset:12px;z-index:90;border-radius:5px;overflow:hidden;background:radial-gradient(80% 60% at 100% 100%,rgba(236,48,19,.5) 0%,rgba(236,48,19,0) 70%),linear-gradient(180deg,#141313 0%,#070606 100%);color:#f3f2f2;display:flex;flex-direction:column;padding:12px 20px 24px">
+    <div style="display:flex;justify-content:space-between;align-items:center;height:60px">
+      <img src="assets/logo-dark.png" alt="Bad Temper" style="height:36px;width:auto;display:block">
+      <button aria-label="Close menu" onClick="{{ closeMenu }}" style="appearance:none;cursor:pointer;width:48px;height:48px;border-radius:5px;display:flex;align-items:center;justify-content:center;background:linear-gradient(110deg,rgba(255,255,255,.14),rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.18);color:#f3f2f2"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button>
+    </div>
+    <nav style="margin-top:40px;display:flex;flex-direction:column">
+      <sc-for list="{{ footNav }}" as="l" hint-placeholder-count="6">
+        <a href="{{ l.href }}" onClick="{{ closeMenu }}" style="display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-top:1px solid rgba(243,242,242,.16);font-family:var(--font-heading);font-stretch:62%;font-weight:800;font-size:52px;line-height:.95;text-transform:uppercase;color:#f3f2f2">{{ l.label }}<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg></a>
+      </sc-for>
+    </nav>
+    <div style="margin-top:auto;display:grid;grid-template-columns:1fr 1fr;gap:10px">
+      <a href="#classes" onClick="{{ closeMenu }}" style="display:flex;align-items:center;justify-content:space-between;height:56px;padding:0 16px 0 18px;border-radius:5px;background:linear-gradient(110deg,rgba(255,255,255,.16),rgba(255,255,255,.04));border:1px solid rgba(255,255,255,.26);color:#f3f2f2;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase">Classes</a>
+      <a href="#booking" onClick="{{ closeMenu }}" style="display:flex;align-items:center;justify-content:space-between;height:56px;padding:0 16px 0 18px;border-radius:5px;background:linear-gradient(110deg,var(--color-accent-500) 0%,var(--color-accent) 40%,var(--color-accent-700) 100%);color:#fff;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase">Book now</a>
+    </div>
+  </div>
+</sc-if>
+
+<section id="top" data-m="hero" data-screen-label="01 Hero" style="position:relative;margin:12px;height:calc(100vh - 24px);min-height:840px;border-radius:5px;overflow:hidden;background:#0f0e0e;color:#f3f2f2">
+  <div data-hero-media="" style="position:absolute;inset:0">
+    <div style="position:absolute;inset:0;background:radial-gradient(90% 75% at 72% 28%,var(--color-accent-900) 0%,#171515 52%,#0b0a0a 100%)"></div>
+    <div style="position:absolute;inset:0;filter:var(--img-filter,grayscale(1) contrast(1.05))"><image-slot id="hero-main" shape="rect" placeholder="Hero photograph — class in motion" style="color:#f3f2f2"></image-slot></div>
+  </div>
+  <div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(11,10,10,.6) 0%,rgba(11,10,10,0) 26%,rgba(11,10,10,.05) 50%,rgba(11,10,10,.92) 100%),radial-gradient(48% 46% at 100% 100%,rgba(236,48,19,.42) 0%,rgba(236,48,19,0) 70%)"></div>
+  <div data-hero-eyebrow="" data-m="eyebrow" style="position:absolute;left:48px;right:48px;top:128px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;pointer-events:none;font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(243,242,242,.8)">
+    <span style="border-top:2px solid rgba(243,242,242,.5);padding-top:14px">Hot mat Pilates studio</span>
+    <span style="border-top:2px solid rgba(243,242,242,.5);padding-top:14px">Sculpt · Strength · Barre</span>
+    <span style="border-top:2px solid rgba(243,242,242,.5);padding-top:14px">HIIT · Cardio</span>
+    <span style="border-top:2px solid rgba(243,242,242,.5);padding-top:14px">Staten Island, NY</span>
+  </div>
+  <div data-m="stack inset gap" style="position:absolute;left:36px;right:48px;bottom:44px;display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:56px;align-items:end;pointer-events:none">
+    <div data-hero-logo="" style="max-width:1000px"><img src="assets/logo-dark.png" alt="Bad Temper — Est. 2026" style="display:block;width:100%;height:auto"></div>
+    <div data-hero-copy="" style="display:flex;flex-direction:column;gap:28px;padding-bottom:16px;pointer-events:auto">
+      <p data-fs="p" style="margin:0;font-size:20px;line-height:1.45;color:rgba(243,242,242,.88);text-wrap:pretty">Hot mat Pilates and high-energy classes — sculpt, strength, barre, HIIT and cardio — in the heart of Staten Island.</p>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <a href="#booking" data-magnetic="" style="display:flex;align-items:center;justify-content:space-between;height:64px;padding:0 22px 0 24px;border-radius:5px;background:linear-gradient(110deg,var(--color-accent-500) 0%,var(--color-accent) 40%,var(--color-accent-700) 100%);background-size:180% 100%;background-position:0% 0;color:#fff;font-size:14px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;box-shadow:0 18px 40px -16px rgba(236,48,19,.9),inset 0 1px 0 rgba(255,255,255,.3);transition:background-position .6s" style-hover="background-position:100% 0;color:#fff">Book now<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg></a>
+        <a href="#classes" data-magnetic="" style="display:flex;align-items:center;justify-content:space-between;height:56px;padding:0 22px 0 24px;border-radius:5px;background:linear-gradient(110deg,rgba(255,255,255,.16),rgba(255,255,255,.04));border:1px solid rgba(255,255,255,.26);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);color:#f3f2f2;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;transition:border-color .4s" style-hover="border-color:rgba(255,255,255,.6);color:#fff">View classes<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="02 Quick book" style="padding:64px 0 12px;overflow:hidden">
+  <div data-marquee="" style="display:flex;width:max-content">
+    <sc-for list="{{ marqueeGroups }}" as="g" hint-placeholder-count="2">
+      <div style="display:flex;align-items:center;gap:56px;padding-right:56px">
+        <sc-for list="{{ marquee }}" as="m" hint-placeholder-count="6">
+          <div style="display:flex;align-items:center;gap:56px">
+            <span style="font-family:var(--font-heading);font-stretch:62%;font-weight:800;font-size:clamp(96px,11vw,168px);line-height:.9;text-transform:uppercase;white-space:nowrap" data-fs="mq" data-x=";color:#201e1d">{{ m }}</span>
+            <span style="width:22px;height:22px;border-radius:50%;background:linear-gradient(135deg,var(--color-accent-500),var(--color-accent-700));flex:none"></span>
+          </div>
+        </sc-for>
+      </div>
+    </sc-for>
+  </div>
+  <div data-reveal="" data-m="strip" style="margin:56px 12px 0;display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:48px;align-items:center;padding:28px 28px 28px 48px;border-radius:5px;background:linear-gradient(100deg,#ffffff 0%,#f7f6f6 55%,var(--color-accent-100) 100%);border:1px solid rgba(32,30,29,.1)">
+    <span style="font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--color-accent-700)">New to Bad Temper?</span>
+    <div style="display:flex;align-items:baseline;gap:24px;flex-wrap:wrap">
+      <span data-fs="d4" style="font-family:var(--font-heading);font-stretch:75%;font-weight:800;font-size:40px;line-height:1;text-transform:uppercase">First-Time Client Special — 3 Classes for $60</span>
+      <span style="font-size:15px;color:var(--color-neutral-700)">Available to first-time clients only.</span>
+    </div>
+    <a href="#booking" data-magnetic="" style="display:inline-flex;align-items:center;justify-content:space-between;gap:40px;height:60px;padding:0 20px 0 24px;border-radius:5px;background:linear-gradient(110deg,var(--color-accent-500) 0%,var(--color-accent) 40%,var(--color-accent-700) 100%);background-size:180% 100%;background-position:0% 0;color:#fff;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;box-shadow:0 14px 34px -14px rgba(236,48,19,.8),inset 0 1px 0 rgba(255,255,255,.28);transition:background-position .6s" style-hover="background-position:100% 0;color:#fff">Book a class<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg></a>
+  </div>
+</section>
+
+<section id="about" data-m="pad gap" data-screen-label="03 About" style="padding:160px 60px 140px;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:start">
+  <div data-m="full gap" style="grid-column:1 / span 7;display:flex;flex-direction:column;gap:56px">
+    <span data-reveal="" style="font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--color-accent-700);border-top:2px solid #201e1d;padding-top:14px;max-width:320px">(01) The studio</span>
+    <p data-words="" data-fs="d3" style="margin:0;font-family:var(--font-heading);font-weight:600;font-size:clamp(40px,4.3vw,64px);line-height:1.04;letter-spacing:-.025em;text-wrap:pretty">
+      <sc-for list="{{ introWords }}" as="w" hint-placeholder-count="20"><sc-if value="{{ w.em }}"><span data-word="" style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;color:var(--color-accent);letter-spacing:-.01em">{{ w.t }} </span></sc-if><sc-if value="{{ w.plain }}"><span data-word="">{{ w.t }} </span></sc-if></sc-for>
+    </p>
+    <div data-reveal="" style="display:flex;gap:10px;flex-wrap:wrap">
+      <sc-for list="{{ formatNames }}" as="n" hint-placeholder-count="5">
+        <a href="#formats" style="display:inline-flex;align-items:center;height:44px;padding:0 18px;border-radius:5px;border:1px solid rgba(32,30,29,.25);font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#201e1d;transition:background .3s,color .3s,border-color .3s" style-hover="background:#201e1d;color:#f3f2f2;border-color:#201e1d">{{ n }}</a>
+      </sc-for>
+    </div>
+  </div>
+  <div data-m="full" style="grid-column:8 / span 5;position:relative;padding-top:80px;margin-bottom:0">
+    <div data-clip="" data-mh="m" style="position:relative;height:680px;border-radius:5px;overflow:hidden;background:linear-gradient(160deg,#e3e1e1 0%,#d4d1d1 60%,var(--color-accent-200) 100%)">
+      <div data-zoom="" style="position:absolute;inset:0;filter:var(--img-filter,grayscale(1) contrast(1.05))"><image-slot id="about-tall" shape="rect" placeholder="Portrait — instructor on the mat"></image-slot></div>
+    </div>
+    <div data-speed="0.6" data-m="aboutsmall" style="position:absolute;left:-150px;bottom:-90px;width:260px;height:330px;border-radius:5px;overflow:hidden;border:6px solid #f3f2f2;box-shadow:0 30px 60px -30px rgba(32,30,29,.5);background:radial-gradient(120% 90% at 80% 10%,var(--color-accent-900) 0%,#1a1717 60%,#0f0e0e 100%);color:#f3f2f2">
+      <div style="position:absolute;inset:0;filter:var(--img-filter,grayscale(1) contrast(1.05))"><image-slot id="about-small" shape="rect" placeholder="Detail shot"></image-slot></div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="04 Feature image" style="margin:0 12px">
+  <div data-clip="" data-mh="l" style="position:relative;height:88vh;min-height:720px;border-radius:5px;overflow:hidden;background:radial-gradient(100% 80% at 30% 20%,var(--color-accent-900) 0%,#171515 55%,#0b0a0a 100%);color:#f3f2f2">
+    <div data-zoom="" style="position:absolute;inset:0;filter:var(--img-filter,grayscale(1) contrast(1.05))"><image-slot id="feature-wide" shape="rect" placeholder="Full-bleed studio photograph"></image-slot></div>
+    <div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(0deg,rgba(11,10,10,.7) 0%,rgba(11,10,10,0) 45%)"></div>
+    <div data-m="inset col" style="position:absolute;left:48px;right:48px;bottom:44px;display:flex;justify-content:space-between;align-items:flex-end;gap:24px;pointer-events:none">
+      <span data-fs="d1" style="font-family:var(--font-heading);font-stretch:62%;font-weight:800;font-size:clamp(88px,10vw,156px);line-height:.84;text-transform:uppercase">Turn up<br>the heat.</span>
+      <span style="font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:rgba(243,242,242,.8)">Hot mat Pilates · Staten Island, NY</span>
+    </div>
+  </div>
+</section>
+
+<section id="formats" data-m="cpad" data-screen-label="05 Formats" style="margin:12px;padding:128px 48px;border-radius:5px;background:linear-gradient(180deg,#141313 0%,#0b0a0a 100%);color:#f3f2f2;position:relative;overflow:hidden">
+  <div style="position:absolute;right:-20%;top:-30%;width:70%;height:90%;pointer-events:none;background:radial-gradient(closest-side,rgba(236,48,19,.22),rgba(236,48,19,0))"></div>
+  <div data-m="stack gap mb" style="position:relative;display:grid;grid-template-columns:minmax(0,1fr) 420px;gap:48px;align-items:end;margin-bottom:80px">
+    <div style="display:flex;flex-direction:column;gap:32px">
+      <span data-reveal="" style="font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--color-accent-400);border-top:2px solid rgba(243,242,242,.6);padding-top:14px;max-width:320px">(02) Class formats</span>
+      <h2 data-reveal="" data-fs="d1" style="margin:0;font-family:var(--font-heading);font-stretch:62%;font-weight:800;font-size:clamp(80px,9.4vw,148px);line-height:.84;text-transform:uppercase">Five formats.<br><span style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;text-transform:none;font-stretch:100%;color:var(--color-accent)">One studio.</span></h2>
+    </div>
+    <div data-reveal="" style="display:flex;flex-direction:column;gap:24px">
+      <p style="margin:0;font-size:18px;line-height:1.55;color:rgba(243,242,242,.72)">Hot mat Pilates sits at the core. Around it, the schedule moves between five class formats. Hover or tap to preview each one.</p>
+      <a href="#classes" style="display:flex;align-items:center;justify-content:space-between;height:56px;padding:0 22px 0 24px;border-radius:5px;background:linear-gradient(110deg,rgba(255,255,255,.16),rgba(255,255,255,.04));border:1px solid rgba(255,255,255,.26);color:#f3f2f2;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;transition:border-color .4s" style-hover="border-color:rgba(255,255,255,.6);color:#fff">View classes<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
+    </div>
+  </div>
+  <div data-m="stack gap" style="position:relative;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:48px;align-items:stretch">
+    <div style="display:flex;flex-direction:column;border-bottom:1px solid rgba(243,242,242,.16)">
+      <sc-for list="{{ formats }}" as="f" hint-placeholder-count="5">
+        <a href="#classes" data-m="fmtrow" onMouseEnter="{{ f.enter }}" onFocus="{{ f.enter }}" onClick="{{ f.tap }}" style="display:grid;grid-template-columns:72px minmax(0,1fr) 64px;align-items:center;gap:16px;padding:14px 0;border-top:1px solid rgba(243,242,242,.16);color:{{ f.color }};transition:color .4s">
+          <span style="font-size:13px;font-weight:700;letter-spacing:.16em;color:var(--color-accent)">{{ f.n }}</span>
+          <span data-fs="d2" style="font-family:var(--font-heading);font-stretch:62%;font-weight:800;font-size:clamp(72px,7.6vw,116px);line-height:.92;text-transform:uppercase;transform:{{ f.shift }};transition:transform .6s cubic-bezier(.2,.7,.2,1)">{{ f.name }}</span>
+          <span data-m="arrow" style="width:56px;height:56px;border-radius:5px;display:flex;align-items:center;justify-content:center;background:{{ f.arrowBg }};transition:background .4s;color:#fff"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg></span>
+        </a>
+      </sc-for>
+    </div>
+    <div data-mh="m" style="position:relative;min-height:640px;border-radius:5px;overflow:hidden;background:radial-gradient(120% 90% at 80% 10%,var(--color-accent-900) 0%,#1a1717 55%,#0f0e0e 100%)">
+      <sc-for list="{{ formats }}" as="f" hint-placeholder-count="1">
+        <div style="position:absolute;inset:0;clip-path:{{ f.clip }};z-index:{{ f.z }};pointer-events:{{ f.pe }};transition:clip-path .9s cubic-bezier(.7,0,.2,1);background:radial-gradient(120% 90% at 80% 10%,var(--color-accent-900) 0%,#1a1717 55%,#0f0e0e 100%)">
+          <div style="position:absolute;inset:0;filter:var(--img-filter,grayscale(1) contrast(1.05))"><image-slot id="fmt-{{ f.i }}" shape="rect" placeholder="{{ f.ph }}" style="color:#f3f2f2"></image-slot></div>
+          <div style="position:absolute;left:24px;bottom:24px;display:flex;align-items:center;gap:10px;height:40px;padding:0 14px;border-radius:5px;background:rgba(11,10,10,.6);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;pointer-events:none">
+            <span style="width:8px;height:8px;border-radius:50%;background:var(--color-accent)"></span>{{ f.name }}
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section id="classes" data-hsection="" data-m="hsec" data-screen-label="06 Signature classes" style="position:relative;height:100vh;min-height:760px;overflow:hidden;display:flex;align-items:center">
+  <div data-htrack="" data-m="htrack" style="display:flex;gap:24px;padding:0 60px;align-items:stretch;width:max-content">
+    <div data-m="hintro" style="width:440px;flex:none;display:flex;flex-direction:column;justify-content:space-between;padding:8px 0">
+      <div style="display:flex;flex-direction:column;gap:32px">
+        <span style="font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--color-accent-700);border-top:2px solid #201e1d;padding-top:14px">(03) Signature classes</span>
+        <h2 data-fs="d1" style="margin:0;font-family:var(--font-heading);font-stretch:62%;font-weight:800;font-size:128px;line-height:.84;text-transform:uppercase">Three<br>classes.<br><span style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;text-transform:none;font-stretch:100%;color:var(--color-accent)">Zero chill.</span></h2>
+        <p style="margin:0;font-size:18px;line-height:1.55;color:var(--color-neutral-700);max-width:380px">Every signature class is open to all levels. Pick the intensity that fits your day.</p>
+      </div>
+      <div style="display:flex;align-items:center;gap:14px;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--color-neutral-700)">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>Scroll to explore
+      </div>
+    </div>
+    <sc-for list="{{ classes }}" as="c" hint-placeholder-count="3">
+      <article data-hcard="" data-m="hcard" style="width:1080px;flex:none;height:auto;min-height:min(700px,78vh);max-height:calc(100vh - 80px);display:grid;grid-template-columns:440px minmax(0,1fr);border-radius:5px;overflow:hidden;background:linear-gradient(145deg,#1f1d1d 0%,#121111 60%,#0b0a0a 100%);color:#f3f2f2;box-shadow:0 40px 80px -40px rgba(32,30,29,.55)">
+        <div data-m="hcardimg" style="position:relative;overflow:hidden;background:radial-gradient(120% 90% at 80% 10%,var(--color-accent-900) 0%,#1a1717 55%,#0f0e0e 100%)">
+          <div data-hcard-img="" style="position:absolute;top:0;bottom:0;left:-12%;width:124%;filter:var(--img-filter,grayscale(1) contrast(1.05))"><image-slot id="class-{{ c.i }}" shape="rect" placeholder="{{ c.ph }}" style="color:#f3f2f2"></image-slot></div>
+          <span style="position:absolute;left:24px;top:20px;font-family:var(--font-heading);font-stretch:62%;font-weight:800;font-size:120px;line-height:1;color:rgba(243,242,242,.9);pointer-events:none">{{ c.n }}</span>
+        </div>
+        <div data-m="hcardbody" style="padding:clamp(24px,4vh,40px) 44px;display:flex;flex-direction:column;gap:clamp(12px,2vh,22px);min-height:0">
+          <span style="font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--color-accent-400)">{{ c.kicker }}</span>
+          <h3 data-fs="d2" style="margin:0;font-family:var(--font-heading);font-stretch:62%;font-weight:800;font-size:clamp(56px,8.5vh,80px);white-space:nowrap;line-height:.86;text-transform:uppercase">{{ c.name }}</h3>
+          <div style="display:flex;flex-direction:column;gap:12px;font-size:15px;line-height:1.6;color:rgba(243,242,242,.72);text-wrap:pretty">
+            <p style="margin:0">{{ c.p1 }}</p>
+            <p style="margin:0">{{ c.p2 }}</p>
+          </div>
+          <div style="margin-top:auto;flex:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;border-top:2px solid rgba(243,242,242,.2);padding-top:18px">
+            <sc-for list="{{ c.meta }}" as="m" hint-placeholder-count="3">
+              <div style="display:flex;flex-direction:column;gap:8px">
+                <span style="font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(243,242,242,.5)">{{ m.k }}</span>
+                <span style="font-size:15px;font-weight:600;line-height:1.3">{{ m.v }}</span>
+                <sc-if value="{{ m.bar }}"><div style="display:flex;gap:4px"><sc-for list="{{ m.segs }}" as="s" hint-placeholder-count="4"><span style="flex:1;height:4px;border-radius:2px;background:{{ s }}"></span></sc-for></div></sc-if>
+              </div>
+            </sc-for>
+          </div>
+          <a href="#booking" onClick="{{ c.pick }}" style="flex:none;display:flex;align-items:center;justify-content:space-between;gap:16px;width:100%;box-sizing:border-box;height:56px;padding:0 20px 0 24px;border-radius:5px;background:linear-gradient(110deg,var(--color-accent-500) 0%,var(--color-accent) 40%,var(--color-accent-700) 100%);background-size:180% 100%;background-position:0% 0;color:#fff;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;box-shadow:inset 0 1px 0 rgba(255,255,255,.28);transition:background-position .6s" style-hover="background-position:100% 0;color:#fff"><span style="display:flex;gap:.6em"><span>Book</span><span>{{ c.name }}</span></span><svg style="flex:none" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg></a>
+        </div>
+      </article>
+    </sc-for>
+  </div>
+  <div data-m="hide" style="position:absolute;left:60px;right:60px;bottom:32px;height:2px;background:rgba(32,30,29,.14);border-radius:2px;overflow:hidden">
+    <div data-hbar="" style="height:100%;width:100%;transform-origin:left center;transform:scaleX(0);background:linear-gradient(90deg,var(--color-accent-500),var(--color-accent-700))"></div>
+  </div>
+</section>
+
+<section id="memberships" data-m="pad" data-screen-label="07 Memberships" style="padding:160px 60px 140px">
+  <div data-m="stack gap mb" data-t="stack" style="display:grid;grid-template-columns:minmax(0,1fr) auto;gap:48px;align-items:end;margin-bottom:64px">
+    <div style="display:flex;flex-direction:column;gap:32px">
+      <span data-reveal="" style="font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--color-accent-700);border-top:2px solid #201e1d;padding-top:14px;max-width:320px">(04) Memberships &amp; packs</span>
+      <h2 data-reveal="" data-fs="d1" style="margin:0;font-family:var(--font-heading);font-stretch:62%;font-weight:800;font-size:clamp(80px,9.4vw,148px);line-height:.84;text-transform:uppercase">Choose your<br><span style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;text-transform:none;font-stretch:100%;color:var(--color-accent)">commitment.</span></h2>
+    </div>
+    <div data-reveal="" role="tablist" data-m="tabs" style="display:flex;gap:4px;padding:4px;border-radius:5px;background:#e6e4e4">
+      <sc-for list="{{ tabs }}" as="t" hint-placeholder-count="3">
+        <button role="tab" onClick="{{ t.go }}" style="appearance:none;border:0;cursor:pointer;height:48px;padding:0 22px;border-radius:5px;font-family:var(--font-body);font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;background:{{ t.bg }};color:{{ t.fg }};box-shadow:{{ t.sh }};transition:background .3s,color .3s">{{ t.label }}</button>
+      </sc-for>
+    </div>
+  </div>
+  <div data-tabpane="">
+    <sc-if value="{{ tabMem }}" hint-placeholder-val="{{ true }}">
+      <div data-m="stack" style="display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:24px">
+        <div data-m="card" data-mh="auto" style="position:relative;overflow:hidden;min-height:600px;border-radius:5px;padding:40px;display:flex;flex-direction:column;gap:24px;color:#f3f2f2;background:radial-gradient(90% 70% at 100% 100%,rgba(236,48,19,.55) 0%,rgba(236,48,19,0) 70%),linear-gradient(160deg,#242121 0%,#0f0e0e 100%)">
+          <span style="align-self:flex-start;display:inline-flex;align-items:center;height:32px;padding:0 12px;border-radius:5px;background:linear-gradient(110deg,var(--color-accent-500),var(--color-accent-700));font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase">Limited to the First 30 Members</span>
+          <h3 data-fs="d2" style="margin:0;font-family:var(--font-heading);font-stretch:62%;font-weight:800;font-size:clamp(44px,5vw,72px);line-height:.88;text-transform:uppercase">Founders<br>Membership</h3>
+          <div style="margin-top:auto;display:flex;align-items:baseline;gap:10px">
+            <span data-fs="price" style="font-family:var(--font-heading);font-stretch:62%;font-weight:800;font-size:clamp(96px,12vw,180px);line-height:.8">$170</span>
+            <span style="font-size:16px;font-weight:600;color:rgba(243,242,242,.7);white-space:nowrap">/month</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:10px;border-top:2px solid rgba(243,242,242,.2);padding-top:18px">
+            <span style="font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--color-accent-400)">6-month commitment</span>
+            <p style="margin:0;font-size:16px;line-height:1.55;color:rgba(243,242,242,.78)">Available to the first 30 members only. Founders who join during the launch period lock in the $170 monthly rate.</p>
+          </div>
+          <a href="#booking" data-magnetic="" style="display:flex;align-items:center;justify-content:space-between;height:60px;padding:0 20px 0 24px;border-radius:5px;background:linear-gradient(110deg,#ffffff 0%,#f3f2f2 60%,var(--color-accent-200) 100%);color:var(--color-accent-800);font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;transition:box-shadow .4s" style-hover="box-shadow:0 16px 40px -16px rgba(255,255,255,.6);color:var(--color-accent-900)">Become a founder<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg></a>
+        </div>
+        <div style="display:flex;flex-direction:column;border-bottom:2px solid #201e1d">
+          <sc-for list="{{ memberships }}" as="p" hint-placeholder-count="3">
+            <a href="#booking" data-m="memrow" style="flex:1;display:grid;grid-template-columns:minmax(0,1fr) auto 56px;gap:32px;align-items:center;padding:28px 24px;border-top:2px solid #201e1d;border-radius:5px;color:#201e1d;transition:background .4s" style-hover="background:linear-gradient(100deg,#ffffff 0%,var(--color-accent-100) 100%);color:#201e1d">
+              <div style="display:flex;flex-direction:column;gap:10px">
+                <span data-fs="mem" style="font-family:var(--font-heading);font-stretch:70%;font-weight:800;font-size:40px;line-height:.95;text-transform:uppercase">{{ p.name }}</span>
+                <span style="font-size:15px;line-height:1.5;color:var(--color-neutral-700);max-width:460px">{{ p.desc }}</span>
+                <span style="font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--color-accent-700)">{{ p.term }}</span>
+              </div>
+              <div style="display:flex;align-items:baseline;gap:6px">
+                <span data-fs="memprice" style="font-family:var(--font-heading);font-stretch:62%;font-weight:800;font-size:clamp(56px,6vw,88px);line-height:.85">{{ p.price }}</span>
+                <span style="font-size:14px;font-weight:600;color:var(--color-neutral-700)">/month</span>
+              </div>
+              <span data-m="hide" style="width:56px;height:56px;border-radius:5px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#3a3736,#0f0e0e);color:#fff"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg></span>
+            </a>
+          </sc-for>
+        </div>
+      </div>
+    </sc-if>
+    <sc-if value="{{ tabPacks }}">
+      <div data-m="stack" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px">
+        <sc-for list="{{ packs }}" as="p" hint-placeholder-count="3">
+          <div data-m="card" data-mh="auto" style="min-height:460px;border-radius:5px;padding:36px;display:flex;flex-direction:column;gap:18px;background:linear-gradient(170deg,#ffffff 0%,#f5f4f4 100%);border:1px solid rgba(32,30,29,.12)">
+            <span style="font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--color-accent-700)">Class pack</span>
+            <h3 data-fs="d3" style="margin:0;font-family:var(--font-heading);font-stretch:70%;font-weight:800;font-size:44px;line-height:.95;text-transform:uppercase">{{ p.name }}</h3>
+            <span data-fs="price" style="margin-top:auto;font-family:var(--font-heading);font-stretch:62%;font-weight:800;font-size:clamp(96px,10vw,150px);line-height:.8">{{ p.price }}</span>
+            <span style="font-size:15px;color:var(--color-neutral-700);border-top:2px solid #201e1d;padding-top:14px">{{ p.note }}</span>
+            <a href="#booking" style="display:flex;align-items:center;justify-content:space-between;height:56px;padding:0 20px 0 24px;border-radius:5px;background:linear-gradient(110deg,#3a3736 0%,#201e1d 50%,#0f0e0e 100%);background-size:180% 100%;background-position:0% 0;color:#f3f2f2;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;transition:background-position .6s" style-hover="background-position:100% 0;color:#fff">Buy pack<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg></a>
+          </div>
+        </sc-for>
+      </div>
+    </sc-if>
+    <sc-if value="{{ tabDrop }}">
+      <div data-m="stack" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px">
+        <sc-for list="{{ dropins }}" as="p" hint-placeholder-count="3">
+          <div data-m="card" data-mh="auto" style="min-height:460px;border-radius:5px;padding:36px;display:flex;flex-direction:column;gap:18px;background:{{ p.bg }};color:{{ p.fg }};border:1px solid rgba(32,30,29,.12)">
+            <span style="font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;opacity:.8">{{ p.kicker }}</span>
+            <h3 data-fs="d3" style="margin:0;font-family:var(--font-heading);font-stretch:70%;font-weight:800;font-size:44px;line-height:.95;text-transform:uppercase">{{ p.name }}</h3>
+            <span data-fs="price" style="margin-top:auto;font-family:var(--font-heading);font-stretch:62%;font-weight:800;font-size:clamp(96px,10vw,150px);line-height:.8">{{ p.price }}</span>
+            <span style="font-size:15px;line-height:1.5;border-top:2px solid currentColor;padding-top:14px;opacity:.9">{{ p.note }}</span>
+            <a href="#booking" style="display:flex;align-items:center;justify-content:space-between;height:56px;padding:0 20px 0 24px;border-radius:5px;background:{{ p.btnBg }};color:{{ p.btnFg }};font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase">Book now<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg></a>
+          </div>
+        </sc-for>
+      </div>
+    </sc-if>
+  </div>
+</section>
+
+<section id="book" data-m="cpad book" data-screen-label="08 Book" style="position:relative;margin:12px;min-height:calc(100vh - 24px);border-radius:5px;overflow:hidden;padding:128px 48px 56px;display:flex;flex-direction:column;justify-content:space-between;gap:64px;color:#fff;background:linear-gradient(135deg,var(--color-accent-500) 0%,var(--color-accent) 38%,var(--color-accent-700) 78%,var(--color-accent-900) 100%)">
+  <div style="position:absolute;inset:0;pointer-events:none;background:radial-gradient(60% 60% at 15% 10%,rgba(255,255,255,.18) 0%,rgba(255,255,255,0) 70%)"></div>
+  <div style="position:relative;display:flex;justify-content:space-between;align-items:flex-start;gap:48px">
+    <span style="font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;border-top:2px solid #fff;padding-top:14px;width:320px">(05) Booking</span>
+    <div data-badge="" data-m="hide" style="width:180px;height:180px;flex:none;position:relative">
+      <svg data-badge-spin="" viewBox="0 0 200 200" width="180" height="180" style="display:block"><defs><path id="bt-circle" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"></path></defs><text style="font-family:var(--font-body);font-size:15px;font-weight:700;letter-spacing:4.5px;text-transform:uppercase" fill="#fff"><textPath href="#bt-circle">Book now · Book now · Book now · </textPath></text></svg>
+      <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="position:absolute;left:68px;top:68px"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg>
+    </div>
+  </div>
+  <h2 data-book-title="" data-fs="dx" style="position:relative;margin:0;font-family:var(--font-heading);font-stretch:62%;font-weight:800;font-size:clamp(160px,19vw,290px);line-height:.8;text-transform:uppercase;letter-spacing:-.01em">Book your<br>class<span style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;text-transform:none;font-stretch:100%">.</span></h2>
+  <div data-m="stack gap" style="position:relative;display:grid;grid-template-columns:minmax(0,1fr) 460px;gap:48px;align-items:end;border-top:2px solid rgba(255,255,255,.6);padding-top:28px">
+    <p data-fs="p" style="margin:0;font-size:22px;line-height:1.45;max-width:560px">Choose a class, choose a time, claim your mat. New here? Start with 3 classes for $60.</p>
+    <a href="#booking" data-magnetic="" style="display:flex;align-items:center;justify-content:space-between;height:80px;padding:0 28px 0 32px;border-radius:5px;background:linear-gradient(110deg,#ffffff 0%,#f3f2f2 60%,var(--color-accent-200) 100%);color:var(--color-accent-800);font-size:16px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;box-shadow:0 24px 50px -20px rgba(77,23,14,.8)" style-hover="color:var(--color-accent-900)">Book your class<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg></a>
+  </div>
+</section>
+
+<section id="booking" data-m="pad" data-screen-label="09 Booking form" style="padding:160px 60px 140px">
+  <div data-m="stack gap" style="display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:48px;align-items:start">
+    <div style="display:flex;flex-direction:column;gap:32px">
+      <span data-reveal="" style="font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--color-accent-700);border-top:2px solid #201e1d;padding-top:14px;max-width:320px">(06) Booking form</span>
+      <h2 data-reveal="" data-fs="d1" style="margin:0;font-family:var(--font-heading);font-stretch:62%;font-weight:800;font-size:clamp(80px,9.4vw,148px);line-height:.84;text-transform:uppercase">Claim<br>your <span style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;text-transform:none;font-stretch:100%;color:var(--color-accent)">mat.</span></h2>
+      <p data-reveal="" style="margin:0;font-size:18px;line-height:1.55;color:var(--color-neutral-700);max-width:440px">Send a booking request and the studio will confirm your spot by email.</p>
+      <div data-reveal="" style="display:flex;flex-direction:column;max-width:440px">
+        <div style="display:flex;justify-content:space-between;gap:24px;padding:16px 0;border-top:2px solid #201e1d"><span style="font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--color-neutral-700)">Weekdays</span><span style="font-size:16px;font-weight:600">5:30 AM – 9:00 PM</span></div>
+        <div style="display:flex;justify-content:space-between;gap:24px;padding:16px 0;border-top:1px solid rgba(32,30,29,.18);border-bottom:1px solid rgba(32,30,29,.18)"><span style="font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--color-neutral-700)">Weekends</span><span style="font-size:16px;font-weight:600">8:00 AM – 2:00 PM</span></div>
+      </div>
+    </div>
+    <div data-reveal="" data-m="card" style="border-radius:5px;padding:40px;background:linear-gradient(170deg,#ffffff 0%,#f5f4f4 100%);border:1px solid rgba(32,30,29,.12)">
+      <sc-if value="{{ bkSent }}">
+        <div style="min-height:520px;display:flex;flex-direction:column;justify-content:flex-end;gap:20px">
+          <span style="width:64px;height:64px;border-radius:5px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--color-accent-500),var(--color-accent-700));color:#fff"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span>
+          <h3 data-fs="d2" style="margin:0;font-family:var(--font-heading);font-stretch:62%;font-weight:800;font-size:80px;line-height:.86;text-transform:uppercase">Request received.</h3>
+          <p style="margin:0;font-size:18px;line-height:1.55;color:var(--color-neutral-700);max-width:480px">Thanks, {{ bkName }}. We'll email you to confirm your {{ bkClass }} booking.</p>
+          <button onClick="{{ bkReset }}" style="align-self:flex-start;appearance:none;cursor:pointer;display:flex;align-items:center;gap:40px;height:56px;padding:0 20px 0 24px;border-radius:5px;border:0;background:linear-gradient(110deg,#3a3736 0%,#201e1d 50%,#0f0e0e 100%);color:#f3f2f2;font-family:var(--font-body);font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase">Book another class<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></button>
+        </div>
+      </sc-if>
+      <sc-if value="{{ bkOpen }}" hint-placeholder-val="{{ true }}">
+        <form onSubmit="{{ bkSubmit }}" style="display:flex;flex-direction:column;gap:20px">
+          <div data-m="form2" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 16px">
+            <label style="display:flex;flex-direction:column;gap:8px;min-width:0"><span style="font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--color-neutral-700)">Full name</span><input name="name" required="" autocomplete="name" placeholder="Your name" style="height:56px;padding:0 16px;border-radius:5px;border:1px solid rgba(32,30,29,.2);background:#fff;font-family:var(--font-body);font-size:16px;color:#201e1d;outline:none;width:100%;box-sizing:border-box;transition:border-color .3s,box-shadow .3s" style-focus="border-color:var(--color-accent);box-shadow:0 0 0 3px rgba(236,48,19,.15)"></label>
+            <label style="display:flex;flex-direction:column;gap:8px;min-width:0"><span style="font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--color-neutral-700)">Email</span><input name="email" type="email" required="" autocomplete="email" placeholder="you@email.com" style="height:56px;padding:0 16px;border-radius:5px;border:1px solid rgba(32,30,29,.2);background:#fff;font-family:var(--font-body);font-size:16px;color:#201e1d;outline:none;width:100%;box-sizing:border-box;transition:border-color .3s,box-shadow .3s" style-focus="border-color:var(--color-accent);box-shadow:0 0 0 3px rgba(236,48,19,.15)"></label>
+            <label style="display:flex;flex-direction:column;gap:8px;min-width:0"><span style="font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--color-neutral-700)">Phone</span><input name="phone" type="tel" autocomplete="tel" placeholder="(000) 000-0000" style="height:56px;padding:0 16px;border-radius:5px;border:1px solid rgba(32,30,29,.2);background:#fff;font-family:var(--font-body);font-size:16px;color:#201e1d;outline:none;width:100%;box-sizing:border-box;transition:border-color .3s,box-shadow .3s" style-focus="border-color:var(--color-accent);box-shadow:0 0 0 3px rgba(236,48,19,.15)"></label>
+            <label style="display:flex;flex-direction:column;gap:8px;min-width:0"><span style="font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--color-neutral-700)">Class</span><select name="class" value="{{ bkClass }}" onChange="{{ bkClassChange }}" style="height:56px;padding:0 16px;border-radius:5px;border:1px solid rgba(32,30,29,.2);background:#fff;font-family:var(--font-body);font-size:16px;color:#201e1d;outline:none;width:100%;box-sizing:border-box;transition:border-color .3s,box-shadow .3s;appearance:none;cursor:pointer;background:#fff url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2216%22 height=%2216%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23201e1d%22 stroke-width=%222%22><path d=%22m6 9 6 6 6-6%22/></svg>') no-repeat right 16px center" style-focus="border-color:var(--color-accent);box-shadow:0 0 0 3px rgba(236,48,19,.15)"><sc-for list="{{ bkClasses }}" as="o" hint-placeholder-count="3"><option value="{{ o }}">{{ o }}</option></sc-for></select></label>
+            <label style="display:flex;flex-direction:column;gap:8px;min-width:0"><span style="font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--color-neutral-700)">Preferred date</span><input name="date" type="date" required="" style="height:56px;padding:0 16px;border-radius:5px;border:1px solid rgba(32,30,29,.2);background:#fff;font-family:var(--font-body);font-size:16px;color:#201e1d;outline:none;width:100%;box-sizing:border-box;transition:border-color .3s,box-shadow .3s" style-focus="border-color:var(--color-accent);box-shadow:0 0 0 3px rgba(236,48,19,.15)"></label>
+            <label style="display:flex;flex-direction:column;gap:8px;min-width:0"><span style="font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--color-neutral-700)">Preferred time</span><input name="time" type="time" required="" style="height:56px;padding:0 16px;border-radius:5px;border:1px solid rgba(32,30,29,.2);background:#fff;font-family:var(--font-body);font-size:16px;color:#201e1d;outline:none;width:100%;box-sizing:border-box;transition:border-color .3s,box-shadow .3s" style-focus="border-color:var(--color-accent);box-shadow:0 0 0 3px rgba(236,48,19,.15)"></label>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <span style="font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--color-neutral-700)">Pass or membership</span>
+            <div data-m="form2" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px;padding:4px;border-radius:5px;background:#e6e4e4">
+              <sc-for list="{{ bkPasses }}" as="p" hint-placeholder-count="3">
+                <button type="button" onClick="{{ p.go }}" style="appearance:none;border:0;cursor:pointer;min-height:48px;padding:8px 12px;border-radius:5px;font-family:var(--font-body);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:{{ p.bg }};color:{{ p.fg }};box-shadow:{{ p.sh }};transition:background .3s,color .3s">{{ p.label }}</button>
+              </sc-for>
+            </div>
+          </div>
+          <label style="display:flex;flex-direction:column;gap:8px;min-width:0"><span style="font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--color-neutral-700)">Notes (optional)</span><textarea name="notes" rows="3" placeholder="Injuries, questions, anything we should know" style="height:56px;padding:0 16px;border-radius:5px;border:1px solid rgba(32,30,29,.2);background:#fff;font-family:var(--font-body);font-size:16px;color:#201e1d;outline:none;width:100%;box-sizing:border-box;transition:border-color .3s,box-shadow .3s;height:auto;padding:14px 16px;resize:vertical;line-height:1.5" style-focus="border-color:var(--color-accent);box-shadow:0 0 0 3px rgba(236,48,19,.15)"></textarea></label>
+          <button type="submit" data-magnetic="" style="appearance:none;border:0;cursor:pointer;display:flex;align-items:center;justify-content:space-between;height:64px;padding:0 22px 0 24px;border-radius:5px;background:linear-gradient(110deg,var(--color-accent-500) 0%,var(--color-accent) 40%,var(--color-accent-700) 100%);background-size:180% 100%;background-position:0% 0;color:#fff;font-family:var(--font-body);font-size:14px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;box-shadow:0 18px 40px -16px rgba(236,48,19,.9),inset 0 1px 0 rgba(255,255,255,.3);transition:background-position .6s" style-hover="background-position:100% 0">Send booking request<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg></button>
+        </form>
+      </sc-if>
+    </div>
+  </div>
+</section>
+
+<section id="studio" data-m="cpad" data-screen-label="10 Studio" style="margin:12px;padding:128px 48px 48px;border-radius:5px;background:linear-gradient(180deg,#141313 0%,#0b0a0a 100%);color:#f3f2f2;position:relative;overflow:hidden">
+  <div style="position:absolute;left:-15%;bottom:-25%;width:60%;height:70%;pointer-events:none;background:radial-gradient(closest-side,rgba(236,48,19,.2),rgba(236,48,19,0))"></div>
+  <div data-m="stack gap" style="position:relative;display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:48px;align-items:stretch">
+    <div data-clip="" data-mh="m" style="position:relative;min-height:760px;border-radius:5px;overflow:hidden;background:radial-gradient(120% 90% at 80% 10%,var(--color-accent-900) 0%,#1a1717 55%,#0f0e0e 100%)">
+      <div data-zoom="" style="position:absolute;inset:0;filter:var(--img-filter,grayscale(1) contrast(1.05))"><image-slot id="studio-main" shape="rect" placeholder="Studio interior photograph" style="color:#f3f2f2"></image-slot></div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:40px">
+      <span data-reveal="" style="font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--color-accent-400);border-top:2px solid rgba(243,242,242,.6);padding-top:14px">(07) Visit the studio</span>
+      <h2 data-reveal="" data-fs="d2" style="margin:0;font-family:var(--font-heading);font-stretch:62%;font-weight:800;font-size:clamp(64px,7.4vw,112px);line-height:.86;text-transform:uppercase">1547 Arthur<br>Kill Road</h2>
+      <span data-reveal="" style="font-size:20px;color:rgba(243,242,242,.78)">Staten Island, NY 10312</span>
+      <div data-reveal="" style="display:flex;flex-direction:column;margin-top:auto">
+        <div style="display:flex;justify-content:space-between;gap:24px;padding:18px 0;border-top:2px solid rgba(243,242,242,.25)">
+          <span style="font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(243,242,242,.6)">Weekdays</span><span style="font-size:18px;font-weight:600">5:30 AM – 9:00 PM</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;gap:24px;padding:18px 0;border-top:1px solid rgba(243,242,242,.18);border-bottom:1px solid rgba(243,242,242,.18)">
+          <span style="font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:rgba(243,242,242,.6)">Weekends</span><span style="font-size:18px;font-weight:600">8:00 AM – 2:00 PM</span>
+        </div>
+        <span style="margin-top:14px;font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--color-accent-400)">Hours may vary</span>
+      </div>
+      <div data-reveal="" data-m="stack" style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=1547+Arthur+Kill+Road+Staten+Island+NY+10312" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;height:60px;padding:0 18px 0 22px;border-radius:5px;background:linear-gradient(110deg,rgba(255,255,255,.16),rgba(255,255,255,.04));border:1px solid rgba(255,255,255,.26);color:#f3f2f2;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;transition:border-color .4s" style-hover="border-color:rgba(255,255,255,.6);color:#fff">Get directions<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg></a>
+        <a href="#booking" style="display:flex;align-items:center;justify-content:space-between;height:60px;padding:0 18px 0 22px;border-radius:5px;background:linear-gradient(110deg,var(--color-accent-500) 0%,var(--color-accent) 40%,var(--color-accent-700) 100%);background-size:180% 100%;background-position:0% 0;color:#fff;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;box-shadow:inset 0 1px 0 rgba(255,255,255,.28);transition:background-position .6s" style-hover="background-position:100% 0;color:#fff">Book now<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg></a>
+      </div>
+    </div>
+  </div>
+  <div data-reveal="" data-m="map" style="position:relative;margin-top:24px;height:420px;border-radius:5px;overflow:hidden;background:#1a1717">
+    <iframe title="Map to Bad Temper, 1547 Arthur Kill Road" src="https://www.google.com/maps?q=1547+Arthur+Kill+Road,+Staten+Island,+NY+10312&amp;output=embed" loading="lazy" style="width:100%;height:100%;border:0;display:block;filter:grayscale(1) invert(.92) contrast(.92) brightness(.95)"></iframe>
+  </div>
+</section>
+
+<section id="social" data-m="pad" data-screen-label="11 Social" style="padding:160px 60px 120px">
+  <div data-m="stack gap mb" style="display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:48px;align-items:end;margin-bottom:64px">
+    <div style="display:flex;flex-direction:column;gap:32px">
+      <span data-reveal="" style="font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--color-accent-700);border-top:2px solid #201e1d;padding-top:14px;max-width:320px">(08) Follow along</span>
+      <a data-reveal="" data-fs="d1" href="https://instagram.com/badtemperstudio" target="_blank" rel="noopener" style="font-family:var(--font-heading);font-stretch:62%;font-weight:800;font-size:clamp(80px,10vw,160px);line-height:.84;text-transform:uppercase;color:#201e1d;transition:color .4s" style-hover="color:var(--color-accent)">@badtemper<br>studio</a>
+    </div>
+    <div data-reveal="" style="display:flex;flex-direction:column;gap:24px">
+      <p style="margin:0;font-size:18px;line-height:1.55;color:var(--color-neutral-700)">Class moments, schedule updates and studio news — on Instagram first.</p>
+      <a href="https://instagram.com/badtemperstudio" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:space-between;height:60px;padding:0 20px 0 24px;border-radius:5px;background:linear-gradient(110deg,#3a3736 0%,#201e1d 50%,#0f0e0e 100%);background-size:180% 100%;background-position:0% 0;color:#f3f2f2;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;transition:background-position .6s" style-hover="background-position:100% 0;color:#fff">Follow @badtemperstudio<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg></a>
+    </div>
+  </div>
+  <div data-m="igrid" style="display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px;align-items:start">
+    <sc-for list="{{ ig }}" as="p" hint-placeholder-count="5">
+      <div data-speed="{{ p.speed }}" style="margin-top:{{ p.mt }}">
+        <div data-mh="s" style="position:relative;display:block;height:{{ p.h }};border-radius:5px;overflow:hidden;background:linear-gradient(160deg,#e3e1e1 0%,#d4d1d1 60%,var(--color-accent-200) 100%);transition:transform .6s cubic-bezier(.2,.7,.2,1)" style-hover="transform:translateY(-8px)">
+          <div style="position:absolute;inset:0;filter:var(--img-filter,grayscale(1) contrast(1.05))"><image-slot id="{{ p.id }}" shape="rect" placeholder="Instagram post"></image-slot></div>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<section id="community" data-m="cpad stack" data-screen-label="12 Reviews" style="margin:0 12px;padding:96px 48px;border-radius:5px;background:linear-gradient(180deg,#ffffff 0%,#f7f6f6 100%);border:1px solid rgba(32,30,29,.08);display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:48px">
+  <div data-reveal="" style="display:flex;flex-direction:column;gap:24px">
+    <span style="font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--color-accent-700);border-top:2px solid #201e1d;padding-top:14px">(09) Community</span>
+    <h3 data-fs="d2" style="margin:0;font-family:var(--font-heading);font-stretch:62%;font-weight:800;font-size:clamp(48px,5.5vw,80px);line-height:.86;text-transform:uppercase">What the community says</h3>
+    <p style="margin:0;font-size:16px;line-height:1.55;color:var(--color-neutral-700)">Placeholder reviews — replace with verified client reviews before launch.</p>
+  </div>
+  <div data-m="stack" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px">
+    <sc-for list="{{ reviews }}" as="r" hint-placeholder-count="3">
+      <figure data-reveal="" style="margin:0;min-height:340px;border-radius:5px;padding:28px;display:flex;flex-direction:column;gap:18px;background:{{ r.bg }};color:{{ r.fg }};border:1px solid rgba(32,30,29,.1)">
+        <div style="display:flex;gap:4px"><sc-for list="{{ stars }}" as="st" hint-placeholder-count="5"><svg width="16" height="16" viewBox="0 0 24 24" fill="{{ r.star }}" stroke="none"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6-4.9-4.6 6.6-.8z"></path></svg></sc-for></div>
+        <blockquote style="margin:0;font-size:18px;line-height:1.5;font-weight:500;text-wrap:pretty">“{{ r.q }}”</blockquote>
+        <figcaption style="margin-top:auto;display:flex;flex-direction:column;gap:4px;border-top:2px solid currentColor;padding-top:14px">
+          <span style="font-size:14px;font-weight:700;letter-spacing:.06em;text-transform:uppercase">{{ r.name }}</span>
+          <span style="font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;opacity:.7">{{ r.cls }}</span>
+        </figcaption>
+      </figure>
+    </sc-for>
+  </div>
+</section>
+
+<section id="final" data-m="final" data-screen-label="13 Final CTA" style="position:relative;margin:12px;height:calc(100vh - 24px);min-height:800px;border-radius:5px;overflow:hidden;background:#0b0a0a;color:#f3f2f2">
+  <div data-speed-bg="" style="position:absolute;inset:-8% 0;background:radial-gradient(90% 75% at 30% 30%,var(--color-accent-900) 0%,#171515 52%,#0b0a0a 100%)">
+    <div style="position:absolute;inset:0;filter:var(--img-filter,grayscale(1) contrast(1.05))"><image-slot id="final-bg" shape="rect" placeholder="Closing photograph" style="color:#f3f2f2"></image-slot></div>
+  </div>
+  <div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(11,10,10,.2) 0%,rgba(11,10,10,.1) 35%,rgba(11,10,10,.88) 100%),radial-gradient(60% 55% at 0% 100%,rgba(236,48,19,.55) 0%,rgba(236,48,19,0) 70%)"></div>
+  <div data-m="inset" style="position:absolute;left:48px;right:48px;bottom:48px;display:flex;flex-direction:column;gap:44px;pointer-events:none">
+    <h2 data-reveal="" data-fs="dx" style="margin:0;font-family:var(--font-heading);font-stretch:62%;font-weight:800;font-size:clamp(130px,15vw,230px);line-height:.8;text-transform:uppercase">Bring your<br><span style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;text-transform:none;font-stretch:100%;color:var(--color-accent-400)">bad temper.</span></h2>
+    <div data-reveal="" data-m="stack" style="display:grid;grid-template-columns:minmax(0,1fr) 300px 260px;gap:12px;align-items:end;border-top:2px solid rgba(243,242,242,.5);padding-top:24px;pointer-events:auto">
+      <p style="margin:0;font-size:20px;line-height:1.45;color:rgba(243,242,242,.85);max-width:520px">Hot mat Pilates in Staten Island. First-time clients start with 3 classes for $60.</p>
+      <a href="#booking" data-magnetic="" style="display:flex;align-items:center;justify-content:space-between;height:64px;padding:0 22px 0 24px;border-radius:5px;background:linear-gradient(110deg,var(--color-accent-500) 0%,var(--color-accent) 40%,var(--color-accent-700) 100%);background-size:180% 100%;background-position:0% 0;color:#fff;font-size:14px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;box-shadow:0 18px 40px -16px rgba(236,48,19,.9),inset 0 1px 0 rgba(255,255,255,.3);transition:background-position .6s" style-hover="background-position:100% 0;color:#fff">Book now<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg></a>
+      <a href="#classes" data-magnetic="" style="display:flex;align-items:center;justify-content:space-between;height:64px;padding:0 22px 0 24px;border-radius:5px;background:linear-gradient(110deg,rgba(255,255,255,.16),rgba(255,255,255,.04));border:1px solid rgba(255,255,255,.26);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);color:#f3f2f2;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;transition:border-color .4s" style-hover="border-color:rgba(255,255,255,.6);color:#fff">View classes<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></a>
+    </div>
+  </div>
+</section>
+
+<footer data-footer="" data-m="footer" data-screen-label="14 Footer" style="position:relative;margin:12px;border-radius:5px;overflow:hidden;background:linear-gradient(180deg,#141313 0%,#070606 100%);color:#f3f2f2;padding:96px 48px 32px;min-height:860px;display:flex;flex-direction:column">
+  <div style="position:absolute;left:0;right:0;bottom:40px;display:flex;justify-content:center;pointer-events:none">
+    <div data-foot-bg="" data-fs="dx" style="font-family:var(--font-heading);font-stretch:62%;font-weight:900;font-size:clamp(200px,24vw,360px);line-height:.8;text-transform:uppercase;white-space:nowrap;letter-spacing:-.01em;background:linear-gradient(100deg,var(--color-accent-500) 0%,var(--color-accent) 35%,#3a1a14 75%,#201e1d 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:blur(14px);opacity:.75">Bad Temper</div>
+  </div>
+  <div data-m="stack gap" style="position:relative;display:grid;grid-template-columns:minmax(0,1fr) 420px;gap:48px;align-items:start;padding-bottom:64px;border-bottom:2px solid rgba(243,242,242,.2)">
+    <a href="#top" aria-label="Bad Temper — back to homepage" style="display:block;width:min(560px,100%)"><img src="assets/logo-dark.png" alt="Bad Temper — Est. 2026" style="width:100%;height:auto;display:block"></a>
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <span data-fs="d3" style="font-family:var(--font-heading);font-stretch:62%;font-weight:800;font-size:64px;line-height:.88;text-transform:uppercase">Your mat<br>is waiting.</span>
+      <a href="#booking" data-magnetic="" style="display:flex;align-items:center;justify-content:space-between;height:64px;padding:0 22px 0 24px;border-radius:5px;background:linear-gradient(110deg,var(--color-accent-500) 0%,var(--color-accent) 40%,var(--color-accent-700) 100%);background-size:180% 100%;background-position:0% 0;color:#fff;font-size:14px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;box-shadow:0 18px 40px -16px rgba(236,48,19,.9),inset 0 1px 0 rgba(255,255,255,.3);transition:background-position .6s" style-hover="background-position:100% 0;color:#fff">Book now<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg></a>
+    </div>
+  </div>
+  <div data-m="two" style="position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px 24px;padding-top:40px;padding-bottom:48px">
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <span style="font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--color-accent-400)">Navigate</span>
+      <sc-for list="{{ footNav }}" as="l" hint-placeholder-count="6"><a href="{{ l.href }}" style="font-size:16px;color:rgba(243,242,242,.85);width:max-content" style-hover="color:#fff">{{ l.label }}</a></sc-for>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <span style="font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--color-accent-400)">Location</span>
+      <span style="font-size:16px;line-height:1.55;color:rgba(243,242,242,.85)">1547 Arthur Kill Road<br>Staten Island, NY 10312</span>
+      <a href="https://www.google.com/maps/dir/?api=1&amp;destination=1547+Arthur+Kill+Road+Staten+Island+NY+10312" target="_blank" rel="noopener" style="font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#f3f2f2;width:max-content;border-bottom:1px solid rgba(243,242,242,.4);padding-bottom:4px" style-hover="color:var(--color-accent-400);border-color:var(--color-accent-400)">Get directions</a>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <span style="font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--color-accent-400)">Hours</span>
+      <span style="font-size:16px;line-height:1.55;color:rgba(243,242,242,.85)">Weekdays: 5:30 AM – 9:00 PM<br>Weekends: 8:00 AM – 2:00 PM</span>
+      <span style="font-size:13px;color:rgba(243,242,242,.55)">Hours may vary.</span>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <span style="font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--color-accent-400)">Social</span>
+      <a href="https://instagram.com/badtemperstudio" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;font-size:16px;color:rgba(243,242,242,.85);width:max-content" style-hover="color:#fff"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>@badtemperstudio</a>
+    </div>
+  </div>
+  <div data-m="col" style="position:relative;margin-top:auto;display:flex;justify-content:space-between;align-items:center;gap:16px;font-size:12px;letter-spacing:.08em;color:rgba(243,242,242,.6)">
+    <div style="display:flex;flex-wrap:wrap;gap:8px 24px"><span>© 2026 Bad Temper. All rights reserved.</span><a href="https://smartmarketingg.com" target="_blank" rel="noopener" style="color:rgba(243,242,242,.7)" style-hover="color:#fff">Website by <span style="color:#f3f2f2;font-weight:700">Smart Marketing</span></a></div>
+    <div style="display:flex;gap:20px 28px;flex-wrap:wrap">
+      <a href="#" style="color:rgba(243,242,242,.7)" style-hover="color:#fff">Privacy Policy</a>
+      <a href="#" style="color:rgba(243,242,242,.7)" style-hover="color:#fff">Terms</a>
+      <a href="#top" style="display:inline-flex;align-items:center;gap:8px;color:#f3f2f2" style-hover="color:var(--color-accent-400)">Back to top<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 7-7 7 7"></path><path d="M12 19V5"></path></svg></a>
+    </div>
+  </div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;smoothScroll&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;},&quot;preloader&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;},&quot;customCursor&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;},&quot;imageTreatment&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Black &amp; white&quot;,&quot;Color&quot;],&quot;default&quot;:&quot;Black &amp; white&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Imagery&quot;}}">
+class Component extends DCLogic {
+  state = { fmt: 0, tab: 'mem', menu: false, bkClass: 'Temper Tantrum', bkPass: 0, bkSent: false, bkName: '' };
+  rootRef = React.createRef();
+  _cleanups = [];
+
+  componentDidMount() {
+    this._applyFilter();
+    const root = this.rootRef.current;
+    const pre = root && root.querySelector('[data-preloader]');
+    this._fallback = setTimeout(() => { if (pre) pre.style.display = 'none'; }, 6000);
+    let tries = 0;
+    const wait = () => {
+      if (window.gsap && window.ScrollTrigger && (window.Lenis || tries > 40)) this._init();
+      else if (tries++ < 160) this._waitT = setTimeout(wait, 50);
+      else if (pre) pre.style.display = 'none';
+    };
+    wait();
+  }
+
+  componentDidUpdate(pp, ps) {
+    if (pp.imageTreatment !== this.props.imageTreatment) this._applyFilter();
+    if (ps.tab !== this.state.tab && window.gsap && this.rootRef.current) {
+      const els = this.rootRef.current.querySelectorAll('[data-tabpane] > * > *');
+      window.gsap.fromTo(els, { y: 40, opacity: 0 }, { y: 0, opacity: 1, stagger: 0.07, duration: 0.7, ease: 'power3.out' });
+      window.ScrollTrigger && window.ScrollTrigger.refresh();
+    }
+  }
+
+  componentWillUnmount() {
+    clearTimeout(this._fallback); clearTimeout(this._waitT);
+    this._cleanups.forEach(f => f());
+    if (this.ctx) this.ctx.revert();
+    if (this.lenis) this.lenis.destroy();
+    if (this._tick && window.gsap) window.gsap.ticker.remove(this._tick);
+  }
+
+  _applyFilter() {
+    const r = this.rootRef.current; if (!r) return;
+    r.style.setProperty('--img-filter', (this.props.imageTreatment ?? 'Black & white') === 'Color' ? 'none' : 'grayscale(1) contrast(1.05)');
+  }
+
+  _on(el, ev, fn, opt) { el.addEventListener(ev, fn, opt); this._cleanups.push(() => el.removeEventListener(ev, fn, opt)); }
+
+  _init() {
+    const g = window.gsap, ST = window.ScrollTrigger, root = this.rootRef.current;
+    if (!root) return;
+    g.registerPlugin(ST);
+    const q = s => Array.from(root.querySelectorAll(s));
+    const $ = s => root.querySelector(s);
+
+    if ((this.props.smoothScroll ?? true) && window.Lenis) {
+      this.lenis = new window.Lenis({ lerp: 0.085, smoothWheel: true });
+      this.lenis.on('scroll', ST.update);
+      this._tick = t => this.lenis.raf(t * 1000);
+      g.ticker.add(this._tick); g.ticker.lagSmoothing(0);
+    }
+    this._on(root, 'click', e => {
+      const a = e.target.closest('a[href^="#"]'); if (!a) return;
+      const id = a.getAttribute('href'); if (id.length < 2) return;
+      const t = root.querySelector(id); if (!t) return;
+      e.preventDefault();
+      if (this.lenis) this.lenis.scrollTo(t, { duration: 1.6 });
+      else window.scrollTo({ top: t.getBoundingClientRect().top + window.scrollY, behavior: 'smooth' });
+    });
+
+    this.ctx = g.context(() => {
+      // Hero intro
+      const heroIn = g.timeline({ paused: true })
+        .fromTo('[data-hero-media]', { scale: 1.22 }, { scale: 1, duration: 2, ease: 'expo.out' })
+        .fromTo('[data-hero-logo]', { clipPath: 'inset(0% 0% 100% 0%)', y: 90 }, { clipPath: 'inset(0% 0% 0% 0%)', y: 0, duration: 1.5, ease: 'expo.out' }, 0.1)
+        .from('[data-hero-eyebrow] > *', { y: 24, opacity: 0, stagger: 0.08, duration: 0.9, ease: 'power3.out' }, 0.35)
+        .from('[data-hero-copy] > *', { y: 36, opacity: 0, stagger: 0.12, duration: 1, ease: 'power3.out' }, 0.5)
+        .from('[data-nav]', { y: -40, opacity: 0, duration: 0.9, ease: 'power3.out' }, 0.3);
+      const pre = $('[data-preloader]');
+      if ((this.props.preloader ?? true) && pre) {
+        if (this.lenis) this.lenis.stop();
+        const num = pre.querySelector('[data-pre-num]'), o = { v: 0 };
+        g.timeline()
+          .from(pre.querySelector('[data-pre-logo]'), { opacity: 0, y: 40, duration: 0.9, ease: 'power3.out' }, 0)
+          .to(o, { v: 100, duration: 1.4, ease: 'power2.inOut', onUpdate: () => { num.textContent = String(Math.round(o.v)).padStart(3, '0'); } }, 0)
+          .to(pre, { clipPath: 'inset(0% 0% 100% 0%)', duration: 1.1, ease: 'expo.inOut' }, '+=0.1')
+          .add(() => heroIn.play(), '-=0.6')
+          .add(() => { pre.style.display = 'none'; if (this.lenis) this.lenis.start(); });
+      } else { if (pre) pre.style.display = 'none'; heroIn.play(); }
+
+      // Hero scroll
+      const heroST = { trigger: '#top', start: 'top top', end: 'bottom top', scrub: true };
+      g.to('[data-hero-media]', { yPercent: 16, ease: 'none', scrollTrigger: heroST });
+      g.to('[data-hero-logo]', { yPercent: -28, opacity: 0.2, ease: 'none', scrollTrigger: { ...heroST } });
+
+      // Nav hide/show
+      const nav = $('[data-nav]'); let hidden = false;
+      ST.create({ start: 0, end: 'max', onUpdate: s => {
+        const h = s.direction === 1 && s.scroll() > 500;
+        if (h !== hidden) { hidden = h; g.to(nav, { yPercent: h ? -170 : 0, duration: 0.6, ease: 'power3.out', overwrite: 'auto' }); }
+      } });
+
+      // Marquee
+      const mq = $('[data-marquee]');
+      if (mq) {
+        const loop = g.to(mq, { xPercent: -50, duration: 32, ease: 'none', repeat: -1 });
+        ST.create({ trigger: mq, start: 'top bottom', end: 'bottom top', onUpdate: s => {
+          const v = Math.abs(s.getVelocity());
+          g.to(loop, { timeScale: 1 + Math.min(5, v / 350), duration: 0.25, overwrite: true });
+          g.to(loop, { timeScale: 1, duration: 1.4, delay: 0.25 });
+        } });
+      }
+
+      q('[data-reveal]').forEach(el => g.from(el, { y: 60, opacity: 0, duration: 1.2, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 90%', once: true } }));
+
+      q('[data-clip]').forEach(el => {
+        g.fromTo(el, { clipPath: 'inset(10% 6% 10% 6% round 5px)' }, { clipPath: 'inset(0% 0% 0% 0% round 5px)', ease: 'none', scrollTrigger: { trigger: el, start: 'top 98%', end: 'top 30%', scrub: true } });
+        const z = el.querySelector('[data-zoom]');
+        if (z) g.fromTo(z, { scale: 1.28 }, { scale: 1, ease: 'none', scrollTrigger: { trigger: el, start: 'top bottom', end: 'bottom top', scrub: true } });
+      });
+
+      q('[data-speed]').forEach(el => {
+        const s = parseFloat(el.dataset.speed) || 0.3;
+        g.fromTo(el, { y: s * 120 }, { y: -s * 120, ease: 'none', scrollTrigger: { trigger: el, start: 'top bottom', end: 'bottom top', scrub: true } });
+      });
+      const fbg = $('[data-speed-bg]');
+      if (fbg) g.fromTo(fbg, { yPercent: -6 }, { yPercent: 6, ease: 'none', scrollTrigger: { trigger: '#final', start: 'top bottom', end: 'bottom top', scrub: true } });
+
+      const words = q('[data-word]');
+      if (words.length) g.fromTo(words, { opacity: 0.12 }, { opacity: 1, stagger: 0.1, ease: 'none', scrollTrigger: { trigger: '[data-words]', start: 'top 82%', end: 'bottom 50%', scrub: true } });
+
+      // Horizontal classes
+      const hs = $('[data-hsection]'), tr = $('[data-htrack]'), bar = $('[data-hbar]');
+      if (hs && tr && window.matchMedia('(min-width: 901px)').matches) {
+        const dist = () => Math.max(0, tr.scrollWidth - hs.clientWidth);
+        const htw = g.to(tr, { x: () => -dist(), ease: 'none', scrollTrigger: {
+          trigger: hs, start: 'top top', end: () => '+=' + dist(), pin: true, scrub: 1, invalidateOnRefresh: true, anticipatePin: 1,
+          onUpdate: s => g.set(bar, { scaleX: s.progress })
+        } });
+        q('[data-hcard]').forEach(card => {
+          const img = card.querySelector('[data-hcard-img]');
+          if (img) g.fromTo(img, { xPercent: -8 }, { xPercent: 8, ease: 'none', scrollTrigger: { trigger: card, containerAnimation: htw, start: 'left right', end: 'right left', scrub: true } });
+        });
+      }
+
+      // Book section
+      g.fromTo('[data-book-title]', { scale: 0.78, transformOrigin: 'left bottom' }, { scale: 1, ease: 'none', scrollTrigger: { trigger: '#book', start: 'top bottom', end: 'center center', scrub: true } });
+      g.to('[data-badge]', { rotation: 180, ease: 'none', scrollTrigger: { trigger: '#book', start: 'top bottom', end: 'bottom top', scrub: true } });
+      g.to('[data-badge-spin]', { rotation: 360, duration: 16, ease: 'none', repeat: -1, transformOrigin: '50% 50%' });
+
+      // Footer
+      const foot = $('[data-footer]'), fb = $('[data-foot-bg]');
+      if (foot && fb) {
+        g.from(fb, { yPercent: 45, ease: 'none', scrollTrigger: { trigger: foot, start: 'top bottom', end: 'bottom bottom', scrub: true } });
+        const fx = g.quickTo(fb, 'x', { duration: 1.4, ease: 'power3' });
+        this._on(foot, 'mousemove', e => { const r = foot.getBoundingClientRect(); fx(((e.clientX - r.left) / r.width - 0.5) * -140); });
+      }
+    }, root);
+
+    // Magnetic buttons
+    if (window.matchMedia('(hover: hover)').matches) q('[data-magnetic]').forEach(el => {
+      const xTo = g.quickTo(el, 'x', { duration: 0.6, ease: 'power3' }), yTo = g.quickTo(el, 'y', { duration: 0.6, ease: 'power3' });
+      this._on(el, 'mousemove', e => { const r = el.getBoundingClientRect(); xTo((e.clientX - r.left - r.width / 2) * 0.22); yTo((e.clientY - r.top - r.height / 2) * 0.35); });
+      this._on(el, 'mouseleave', () => { xTo(0); yTo(0); });
+    });
+
+    // Cursor
+    if ((this.props.customCursor ?? true) && window.matchMedia('(hover: hover) and (min-width: 901px)').matches) {
+      const dot = $('[data-cursor]'), ring = $('[data-cursor-ring]');
+      g.set([dot, ring], { xPercent: -50, yPercent: -50 });
+      const dx = g.quickTo(dot, 'x', { duration: 0.12 }), dy = g.quickTo(dot, 'y', { duration: 0.12 });
+      const rx = g.quickTo(ring, 'x', { duration: 0.45, ease: 'power3' }), ry = g.quickTo(ring, 'y', { duration: 0.45, ease: 'power3' });
+      let shown = false;
+      this._on(window, 'mousemove', e => {
+        if (!shown) { shown = true; g.to([dot, ring], { opacity: 1, duration: 0.3 }); }
+        dx(e.clientX); dy(e.clientY); rx(e.clientX); ry(e.clientY);
+      });
+      this._on(root, 'mouseover', e => { const hot = !!e.target.closest('a,button'); g.to(ring, { scale: hot ? 1.9 : 1, backgroundColor: hot ? 'rgba(236,48,19,.12)' : 'rgba(236,48,19,0)', duration: 0.35, overwrite: 'auto' }); });
+    }
+
+    let lastW = window.innerWidth;
+    this._on(window, 'resize', () => { if ((lastW > 900) !== (window.innerWidth > 900)) { lastW = window.innerWidth; location.reload(); } });
+    const refresh = () => ST.refresh();
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(refresh);
+    this._rt = setTimeout(refresh, 1500);
+    this._cleanups.push(() => clearTimeout(this._rt));
+  }
+
+  renderVals() {
+    const fmtNames = ['Sculpt', 'Strength', 'Barre', 'HIIT', 'Cardio'];
+    const formats = fmtNames.map((name, i) => {
+      const a = i === this.state.fmt;
+      return {
+        i, name, n: String(i + 1).padStart(2, '0'), ph: name + ' class photograph',
+        enter: () => this.state.fmt !== i && this.setState({ fmt: i }),
+        tap: e => { if (this.state.fmt !== i || window.matchMedia('(hover: none)').matches) { e.preventDefault(); e.stopPropagation(); this.setState({ fmt: i }); } },
+        color: a ? '#f3f2f2' : 'rgba(243,242,242,.32)',
+        shift: a ? 'translateX(20px)' : 'translateX(0px)',
+        arrowBg: a ? 'linear-gradient(135deg,var(--color-accent-500),var(--color-accent-700))' : 'rgba(243,242,242,.08)',
+        clip: a ? 'inset(0% 0% 0% 0%)' : 'inset(0% 0% 100% 0%)',
+        z: a ? 2 : 1, pe: a ? 'auto' : 'none'
+      };
+    });
+    const segs = n => [0, 1, 2, 3].map(k => k < n ? 'linear-gradient(90deg,var(--color-accent-500),var(--color-accent))' : 'rgba(243,242,242,.16)');
+    const classes = [
+      { name: 'Temper Tantrum', kicker: 'Signature full-body sculpt', p1: 'Our signature full-body sculpt class. Expect a high-energy mix of Pilates-inspired movement, strength training, light weights, resistance work, and bodyweight exercises designed to target your arms, core, glutes, and legs.', p2: 'This class focuses on building strength, improving endurance, and creating that deep muscle burn through controlled movements, pulses, and holds.', meta: [{ k: 'Intensity', v: 'Moderate–High', bar: true, segs: segs(3) }, { k: 'Targets', v: 'Full Body' }, { k: 'Level', v: 'All Levels' }] },
+      { name: 'Crashout', kicker: 'Strength + sculpt', p1: 'Our strength + sculpt class designed for those who want to turn up the weight. Using slightly heavier dumbbells, this class combines strength-focused exercises with controlled sculpting movements to challenge your muscles and build full-body strength.', p2: 'Expect slower, stronger movements, heavier resistance, and plenty of burn while targeting your arms, core, glutes, and legs.', meta: [{ k: 'Intensity', v: 'High', bar: true, segs: segs(4) }, { k: 'Focus', v: 'Strength + Full-Body Sculpt' }, { k: 'Level', v: 'All Levels' }] },
+      { name: 'Silent Treatment', kicker: 'Stretch + restore', p1: 'Our stretch + restore class with a more traditional Pilates feel. Slow things down with intentional movement, classical Pilates exercises, deep stretching, and mobility work designed to lengthen, strengthen, and reset the body.', p2: 'Expect a lower-impact, controlled flow focused on core connection, flexibility, posture, and recovery. It’s the perfect class for active recovery days or whenever your body needs a little extra care.', meta: [{ k: 'Intensity', v: 'Low', bar: true, segs: segs(1) }, { k: 'Focus', v: 'Classical Pilates + Stretch + Restore' }, { k: 'Level', v: 'All Levels' }] }
+    ].map((c, i) => ({ ...c, i, n: String(i + 1).padStart(2, '0'), ph: c.name + ' photograph', pick: () => this.setState({ bkClass: c.name, bkSent: false }) }));
+
+    const intro = 'Bad Temper is a *hot *mat *Pilates studio in Staten Island. Expect heat, controlled burn and a schedule that moves between sculpt, strength, barre, HIIT and cardio.';
+    const introWords = intro.split(' ').map(t => t[0] === '*' ? { t: t.slice(1), em: true, plain: false } : { t, em: false, plain: true });
+
+    const tabDefs = [['mem', 'Memberships'], ['packs', 'Class packs'], ['drop', 'Drop-in + intro']];
+    const tabs = tabDefs.map(([id, label]) => {
+      const a = this.state.tab === id;
+      return { label, go: () => this.setState({ tab: id }), bg: a ? 'linear-gradient(110deg,var(--color-accent-500),var(--color-accent) 45%,var(--color-accent-700))' : 'transparent', fg: a ? '#fff' : '#201e1d', sh: a ? '0 8px 20px -10px rgba(236,48,19,.8)' : 'none' };
+    });
+
+    const redBg = 'linear-gradient(145deg,var(--color-accent-500) 0%,var(--color-accent) 45%,var(--color-accent-800) 100%)';
+    const lightBg = 'linear-gradient(170deg,#ffffff 0%,#f5f4f4 100%)';
+    const darkBtn = 'linear-gradient(110deg,#3a3736 0%,#201e1d 50%,#0f0e0e 100%)';
+    const whiteBtn = 'linear-gradient(110deg,#ffffff 0%,#f3f2f2 60%,var(--color-accent-200) 100%)';
+
+    return {
+      rootRef: this.rootRef,
+      marquee: ['Hot mat Pilates', 'Sculpt', 'Strength', 'Barre', 'HIIT', 'Cardio'],
+      marqueeGroups: [0, 1],
+      formatNames: fmtNames,
+      introWords, formats, classes, tabs,
+      tabMem: this.state.tab === 'mem', tabPacks: this.state.tab === 'packs', tabDrop: this.state.tab === 'drop',
+      memberships: [
+        { name: 'Unlimited Membership', price: '$215', term: '6-month commitment', desc: 'Unlimited access to classes at a reduced monthly rate for members ready to commit to their routine.' },
+        { name: 'Unlimited Month-to-Month', price: '$230', term: 'No commitment', desc: 'Unlimited classes with the flexibility of a month-to-month membership.' },
+        { name: 'Student + First Responder Membership', price: '$200', term: 'ID verification required', desc: 'Special membership pricing for eligible students and first responders.' }
+      ],
+      packs: [
+        { name: '3-Class Pack', price: '$100', note: 'Expires 1 month after purchase.' },
+        { name: '5-Class Pack', price: '$150', note: 'Expires 2 months after purchase.' },
+        { name: '10-Class Pack', price: '$260', note: 'Expires 3 months after purchase.' }
+      ],
+      dropins: [
+        { kicker: 'First-time clients', name: 'First-Time Client Special — 3 Classes', price: '$60', note: 'Available to first-time clients only. Classes expire 1 month after purchase.', bg: redBg, fg: '#fff', btnBg: whiteBtn, btnFg: 'var(--color-accent-800)' },
+        { kicker: 'Drop-in', name: 'Single Class Drop-In', price: '$30', note: 'Perfect for anyone who wants to take a class without purchasing a membership or package.', bg: lightBg, fg: '#201e1d', btnBg: darkBtn, btnFg: '#f3f2f2' },
+        { kicker: 'Intro offer', name: '2 Weeks Unlimited', price: '$100', note: 'Unlimited classes for two weeks.', bg: lightBg, fg: '#201e1d', btnBg: darkBtn, btnFg: '#f3f2f2' }
+      ],
+      bkClasses: ['Temper Tantrum', 'Crashout', 'Silent Treatment', 'Not sure yet'],
+      bkClass: this.state.bkClass, bkSent: this.state.bkSent, bkOpen: !this.state.bkSent, bkName: this.state.bkName,
+      bkClassChange: e => this.setState({ bkClass: e.target.value }),
+      bkPasses: ['First-time special', 'Drop-in / pack', 'Membership'].map((label, i) => { const on = this.state.bkPass === i; return { label, go: () => this.setState({ bkPass: i }), bg: on ? 'linear-gradient(110deg,var(--color-accent-500),var(--color-accent) 45%,var(--color-accent-700))' : 'transparent', fg: on ? '#fff' : '#201e1d', sh: on ? '0 8px 20px -10px rgba(236,48,19,.8)' : 'none' }; }),
+      bkSubmit: e => { e.preventDefault(); const n = (new FormData(e.target).get('name') || '').toString().trim().split(' ')[0]; this.setState({ bkSent: true, bkName: n || 'there' }); },
+      bkReset: () => this.setState({ bkSent: false }),
+      menuOpen: this.state.menu,
+      openMenu: () => { this.setState({ menu: true }); this.lenis && this.lenis.stop(); },
+      closeMenu: () => { this.setState({ menu: false }); this.lenis && this.lenis.start(); },
+      stars: [1, 2, 3, 4, 5],
+      reviews: [
+        { q: 'The heat makes every hold count. I left my first Temper Tantrum shaking and booked the next one before I got to my car.', name: 'Client name', cls: 'Temper Tantrum', bg: '#f3f2f2', fg: '#201e1d', star: 'var(--color-accent)' },
+        { q: 'Crashout is the hardest 50 minutes of my week and the one I look forward to most. The instructors push you without ever rushing you.', name: 'Client name', cls: 'Crashout', bg: 'linear-gradient(145deg,var(--color-accent-500) 0%,var(--color-accent) 45%,var(--color-accent-800) 100%)', fg: '#ffffff', star: '#ffffff' },
+        { q: 'Silent Treatment is my reset. Slow, controlled, and I walk out standing taller. Finally a studio on Staten Island that feels like this.', name: 'Client name', cls: 'Silent Treatment', bg: '#f3f2f2', fg: '#201e1d', star: 'var(--color-accent)' }
+      ],
+      ig: [
+        { id: 'ig-0', h: '420px', mt: '0px', speed: '0.1' },
+        { id: 'ig-1', h: '340px', mt: '80px', speed: '0.35' },
+        { id: 'ig-2', h: '440px', mt: '0px', speed: '0.15' },
+        { id: 'ig-3', h: '340px', mt: '100px', speed: '0.4' },
+        { id: 'ig-4', h: '420px', mt: '20px', speed: '0.2' }
+      ],
+      
+      footNav: [
+        { label: 'Home', href: '#top' },
+        { label: 'About', href: '#about' },
+        { label: 'Classes', href: '#classes' },
+        { label: 'Membership', href: '#memberships' },
+        { label: 'Gallery', href: '#social' },
+        { label: 'Contact', href: '#studio' },
+        { label: 'Booking', href: '#booking' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>
