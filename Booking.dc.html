@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Booking — Bad Temper, Hot Mat Pilates Staten Island</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="">
+<link rel="preconnect" href="https://unpkg.com" crossorigin="">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&amp;family=Instrument+Serif:ital@0;1&amp;display=swap">
+<link rel="stylesheet" href="_ds/modernist-fefd3ae8-1d78-4423-8f38-3ac89e5694c1/styles.css">
+<script src="_ds/modernist-fefd3ae8-1d78-4423-8f38-3ac89e5694c1/_ds_bundle.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="./image-slot.js"></script>
+<meta name="bt-image-folder" content="images/booking">
+<script src="./page-images.js"></script>
+<style>
+html,body{margin:0;background:#f3f2f2;color:#201e1d;-webkit-font-smoothing:antialiased}
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+a{color:inherit;text-decoration:none}
+a:hover{color:var(--color-accent)}
+*:focus-visible{outline:2px solid var(--color-accent);outline-offset:2px}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+::selection{background:var(--color-accent-200);color:var(--color-accent-900)}
+p,blockquote,figcaption,li,label{text-wrap:pretty}
+h1,h2,h3,h4{text-wrap:balance}
+@media (max-width:1100px){[data-t~="stack"]{grid-template-columns:minmax(0,1fr)!important;gap:32px!important}}
+@media (max-width:900px){
+[data-m~="stack"]{grid-template-columns:minmax(0,1fr)!important}
+[data-m~="two"]{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+[data-m~="pad"]{padding:96px 20px 80px!important}
+[data-m~="cpad"]{padding:72px 20px 24px!important}
+[data-m~="hide"]{display:none!important}
+[data-m~="show"]{display:flex!important}
+[data-m~="col"]{flex-direction:column!important;align-items:flex-start!important}
+[data-m~="full"]{grid-column:1 / -1!important;padding-top:0!important}
+[data-m~="gap"]{gap:28px!important}
+[data-m~="inset"]{left:20px!important;right:20px!important;bottom:20px!important}
+[data-m~="mb"]{margin-bottom:40px!important}
+[data-m~="nav"]{top:12px!important;left:12px!important;right:12px!important;height:60px!important;padding:0 8px 0 14px!important}
+[data-m~="navlogo"]{height:36px!important}
+[data-m~="eyebrow"]{top:96px!important;left:20px!important;right:20px!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:14px!important;font-size:11px!important}
+[data-m~="hero"]{height:auto!important;min-height:640px!important}
+[data-m~="row"]{grid-template-columns:32px minmax(0,1fr)!important;gap:12px!important;padding:22px 0!important}
+[data-m~="row"] > *:nth-child(3){grid-column:2!important}
+[data-m~="card"]{padding:28px 22px!important}
+[data-m~="form2"]{grid-template-columns:minmax(0,1fr)!important}
+[data-m~="map"]{height:300px!important}
+[data-m~="memrow"]{grid-template-columns:minmax(0,1fr) auto!important;gap:16px!important;padding:22px 8px!important}
+[data-fs="price"]{font-size:96px!important}
+[data-fs="mem"]{font-size:26px!important}
+[data-fs="memprice"]{font-size:52px!important}
+[data-mh="auto"]{height:auto!important;min-height:0!important}
+[data-m~="footer"]{padding:72px 20px 24px!important;min-height:720px!important}
+[data-m~="small"]{left:auto!important;right:14px!important;bottom:-48px!important;width:140px!important;height:180px!important}
+[data-fs="dx"]{font-size:clamp(60px,18vw,120px)!important}
+[data-fs="d1"]{font-size:clamp(56px,16vw,88px)!important}
+[data-fs="d2"]{font-size:clamp(44px,12vw,64px)!important}
+[data-fs="d3"]{font-size:clamp(32px,9vw,44px)!important}
+[data-fs="p"]{font-size:17px!important}
+[data-mh="s"]{height:300px!important;min-height:0!important}
+[data-mh="m"]{height:440px!important;min-height:0!important}
+[data-mh="l"]{height:540px!important;min-height:0!important}
+}
+@media (max-width:900px),(hover:none){[data-cursor],[data-cursor-ring]{display:none!important}}
+@media (max-width:1200px){header[data-nav] [data-m~="hide"]{display:none!important}header[data-nav] [data-m~="show"]{display:flex!important}}
+</style>
+</helmet>
+
+<div ref="{{ rootRef }}" style="position:relative;font-family:var(--font-body);background:#f3f2f2;color:#201e1d;overflow-x:clip">
+
+<div data-cursor="" style="position:fixed;left:0;top:0;width:8px;height:8px;border-radius:50%;background:var(--color-accent);z-index:120;pointer-events:none;opacity:0"></div>
+<div data-cursor-ring="" style="position:fixed;left:0;top:0;width:38px;height:38px;border-radius:50%;border:1px solid var(--color-accent);z-index:120;pointer-events:none;opacity:0"></div>
+
+<header data-nav="" data-m="nav" style="position:fixed;top:24px;left:36px;right:36px;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:24px;height:68px;padding:0 10px 0 20px;border-radius:5px;background:rgba(15,14,14,.62);backdrop-filter:blur(18px) saturate(1.4);-webkit-backdrop-filter:blur(18px) saturate(1.4);border:1px solid rgba(243,242,242,.1);color:#f3f2f2">
+  <a href="Bad%20Temper%20Home.dc.html" aria-label="Bad Temper home" style="display:flex;align-items:center;min-height:44px;flex:none"><img data-m="navlogo" src="assets/logo-dark.png" alt="Bad Temper" style="height:46px;width:auto;max-width:none;flex:none;display:block"></a>
+  <nav data-m="hide" style="display:flex;gap:30px;font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase">
+    <sc-for list="{{ nav }}" as="l" hint-placeholder-count="7">
+      <a href="{{ l.href }}" style="color:{{ l.color }};position:relative" style-hover="color:var(--color-accent-400)">{{ l.label }}</a>
+    </sc-for>
+  </nav>
+  <div style="display:flex;gap:8px;align-items:center">
+    <a href="Bad%20Temper%20Home.dc.html#booking" data-magnetic="" style="display:inline-flex;align-items:center;justify-content:space-between;gap:28px;height:48px;padding:0 16px 0 20px;white-space:nowrap;flex:none;border-radius:5px;background:linear-gradient(110deg,var(--color-accent-500) 0%,var(--color-accent) 40%,var(--color-accent-700) 100%);background-size:180% 100%;background-position:0% 0;color:#fff;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;box-shadow:0 10px 26px -12px rgba(236,48,19,.8),inset 0 1px 0 rgba(255,255,255,.28);transition:background-position .6s" style-hover="background-position:100% 0;color:#fff">Book now<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg></a>
+    <button data-m="show" aria-label="Open menu" onClick="{{ openMenu }}" style="display:none;appearance:none;cursor:pointer;width:48px;height:48px;border-radius:5px;align-items:center;justify-content:center;background:linear-gradient(110deg,rgba(255,255,255,.14),rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.18);color:#f3f2f2"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8h16"></path><path d="M4 16h16"></path></svg></button>
+  </div>
+</header>
+
+<sc-if value="{{ menuOpen }}">
+  <div role="dialog" aria-modal="true" aria-label="Site menu" style="position:fixed;inset:12px;z-index:90;border-radius:5px;overflow:hidden;background:radial-gradient(80% 60% at 100% 100%,rgba(236,48,19,.5) 0%,rgba(236,48,19,0) 70%),linear-gradient(180deg,#141313 0%,#070606 100%);color:#f3f2f2;display:flex;flex-direction:column;padding:12px 20px 24px">
+    <div style="display:flex;justify-content:space-between;align-items:center;height:60px">
+      <img src="assets/logo-dark.png" alt="Bad Temper" style="height:36px;width:auto;display:block">
+      <button aria-label="Close menu" onClick="{{ closeMenu }}" style="appearance:none;cursor:pointer;width:48px;height:48px;border-radius:5px;display:flex;align-items:center;justify-content:center;background:linear-gradient(110deg,rgba(255,255,255,.14),rgba(255,255,255,.03));border:1px solid rgba(255,255,255,.18);color:#f3f2f2"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button>
+    </div>
+    <nav style="margin-top:40px;display:flex;flex-direction:column">
+      <sc-for list="{{ nav }}" as="l" hint-placeholder-count="7">
+        <a href="{{ l.href }}" onClick="{{ closeMenu }}" style="display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-top:1px solid rgba(243,242,242,.16);font-family:var(--font-heading);font-stretch:62%;font-weight:800;font-size:52px;line-height:.95;text-transform:uppercase;color:{{ l.color }}">{{ l.label }}<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg></a>
+      </sc-for>
+    </nav>
+    <div style="margin-top:auto;display:grid;grid-template-columns:1fr 1fr;gap:10px">
+      <a href="Classes.dc.html" style="display:flex;align-items:center;justify-content:space-between;height:56px;padding:0 16px 0 18px;border-radius:5px;background:linear-gradient(110deg,rgba(255,255,255,.16),rgba(255,255,255,.04));border:1px solid rgba(255,255,255,.26);color:#f3f2f2;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase">Classes</a>
+      <a href="Bad%20Temper%20Home.dc.html#booking" style="display:flex;align-items:center;justify-content:space-between;height:56px;padding:0 16px 0 18px;border-radius:5px;background:linear-gradient(110deg,var(--color-accent-500) 0%,var(--color-accent) 40%,var(--color-accent-700) 100%);color:#fff;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase">Book now</a>
+    </div>
+  </div>
+</sc-if>
+
+<section id="top" data-m="hero" data-screen-label="01 Booking hero" style="position:relative;margin:12px;height:78vh;min-height:720px;border-radius:5px;overflow:hidden;background:#0f0e0e;color:#f3f2f2">
+  <div data-hero-media="" style="position:absolute;inset:0">
+    <div style="position:absolute;inset:0;background:radial-gradient(90% 75% at 72% 28%,var(--color-accent-900) 0%,#171515 52%,#0b0a0a 100%)"></div>
+    <div style="position:absolute;inset:0;filter:var(--img-filter,grayscale(1) contrast(1.05))"><image-slot id="booking-hero" shape="rect" placeholder="Booking hero — mat ready, towel and water" style="color:#f3f2f2"></image-slot></div>
+  </div>
+  <div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(11,10,10,.6) 0%,rgba(11,10,10,0) 30%,rgba(11,10,10,.1) 50%,rgba(11,10,10,.92) 100%),radial-gradient(48% 46% at 100% 100%,rgba(236,48,19,.42) 0%,rgba(236,48,19,0) 70%)"></div>
+  <div data-m="stack inset gap" style="position:absolute;left:48px;right:48px;bottom:44px;display:grid;grid-template-columns:minmax(0,1fr) 380px;gap:56px;align-items:end">
+    <h1 data-hero-title="" data-fs="d1" style="margin:0;min-width:0;overflow-wrap:anywhere;font-family:var(--font-heading);font-stretch:62%;font-weight:800;font-size:clamp(72px,8.4vw,150px);line-height:.84;text-transform:uppercase;letter-spacing:-.01em">Book your<br><span style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;text-transform:none;font-stretch:100%;color:var(--color-accent-400)">class.</span></h1>
+    <div data-hero-copy="" style="display:flex;flex-direction:column;gap:28px;padding-bottom:16px">
+      <p data-fs="p" style="margin:0;font-size:20px;line-height:1.45;color:rgba(243,242,242,.88)">Choose a class, choose a time, claim your mat. The studio confirms every request by email.</p>
+      <a href="#booking" data-magnetic="" style="display:flex;align-items:center;justify-content:space-between;height:56px;padding:0 22px 0 24px;border-radius:5px;background:linear-gradient(110deg,rgba(255,255,255,.16),rgba(255,255,255,.04));border:1px solid rgba(255,255,255,.26);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);color:#f3f2f2;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;transition:border-color .4s" style-hover="border-color:rgba(255,255,255,.6);color:#fff">Start booking<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg></a>
+    </div>
+  </div>
+</section>
+
+<section id="booking" data-m="pad" data-screen-label="02 Booking form" style="padding:160px 60px 140px">
+  <div data-m="stack gap" style="display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:48px;align-items:start">
+    <div style="display:flex;flex-direction:column;gap:32px">
+      <span data-reveal="" style="font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--color-accent-700);border-top:2px solid #201e1d;padding-top:14px;max-width:320px">(01) Booking form</span>
+      <h2 data-reveal="" data-fs="d1" style="margin:0;font-family:var(--font-heading);font-stretch:62%;font-weight:800;font-size:clamp(80px,9.4vw,148px);line-height:.84;text-transform:uppercase">Claim<br>your <span style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;text-transform:none;font-stretch:100%;color:var(--color-accent)">mat.</span></h2>
+      <p data-reveal="" style="margin:0;font-size:18px;line-height:1.55;color:var(--color-neutral-700);max-width:440px">Send a booking request and the studio will confirm your spot by email.</p>
+      <div data-reveal="" style="display:flex;flex-direction:column;max-width:440px">
+        <div style="display:flex;justify-content:space-between;gap:24px;padding:16px 0;border-top:2px solid #201e1d"><span style="font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--color-neutral-700)">Weekdays</span><span style="font-size:16px;font-weight:600">5:30 AM – 9:00 PM</span></div>
+        <div style="display:flex;justify-content:space-between;gap:24px;padding:16px 0;border-top:1px solid rgba(32,30,29,.18);border-bottom:1px solid rgba(32,30,29,.18)"><span style="font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--color-neutral-700)">Weekends</span><span style="font-size:16px;font-weight:600">8:00 AM – 2:00 PM</span></div>
+      </div>
+    </div>
+    <div data-reveal="" data-m="card" style="border-radius:5px;padding:40px;background:linear-gradient(170deg,#ffffff 0%,#f5f4f4 100%);border:1px solid rgba(32,30,29,.12)">
+      <sc-if value="{{ bkSent }}">
+        <div style="min-height:520px;display:flex;flex-direction:column;justify-content:flex-end;gap:20px">
+          <span style="width:64px;height:64px;border-radius:5px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--color-accent-500),var(--color-accent-700));color:#fff"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></span>
+          <h3 data-fs="d2" style="margin:0;font-family:var(--font-heading);font-stretch:62%;font-weight:800;font-size:80px;line-height:.86;text-transform:uppercase">Request received.</h3>
+          <p style="margin:0;font-size:18px;line-height:1.55;color:var(--color-neutral-700);max-width:480px">Thanks, {{ bkName }}. We'll email you to confirm your {{ bkClass }} booking.</p>
+          <button onClick="{{ bkReset }}" style="align-self:flex-start;appearance:none;cursor:pointer;display:flex;align-items:center;gap:40px;height:56px;padding:0 20px 0 24px;border-radius:5px;border:0;background:linear-gradient(110deg,#3a3736 0%,#201e1d 50%,#0f0e0e 100%);color:#f3f2f2;font-family:var(--font-body);font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase">Book another class<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></button>
+        </div>
+      </sc-if>
+      <sc-if value="{{ bkOpen }}" hint-placeholder-val="{{ true }}">
+        <form onSubmit="{{ bkSubmit }}" style="position:relative;display:flex;flex-direction:column;gap:20px"><input name="company" tabIndex="-1" autoComplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
+          <div data-m="form2" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 16px">
+            <label style="display:flex;flex-direction:column;gap:8px;min-width:0"><span style="font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--color-neutral-700)">Full name</span><input name="name" maxLength="80" required="{{ true }}" autocomplete="name" placeholder="Your name" style="height:56px;padding:0 16px;border-radius:5px;border:1px solid rgba(32,30,29,.2);background:#fff;font-family:var(--font-body);font-size:16px;color:#201e1d;outline:none;width:100%;box-sizing:border-box;transition:border-color .3s,box-shadow .3s" style-focus="border-color:var(--color-accent);box-shadow:0 0 0 3px rgba(236,48,19,.15)"></label>
+            <label style="display:flex;flex-direction:column;gap:8px;min-width:0"><span style="font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--color-neutral-700)">Email</span><input name="email" type="email" maxLength="120" required="{{ true }}" autocomplete="email" placeholder="you@email.com" style="height:56px;padding:0 16px;border-radius:5px;border:1px solid rgba(32,30,29,.2);background:#fff;font-family:var(--font-body);font-size:16px;color:#201e1d;outline:none;width:100%;box-sizing:border-box;transition:border-color .3s,box-shadow .3s" style-focus="border-color:var(--color-accent);box-shadow:0 0 0 3px rgba(236,48,19,.15)"></label>
+            <label style="display:flex;flex-direction:column;gap:8px;min-width:0"><span style="font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--color-neutral-700)">Phone</span><input name="phone" type="tel" maxLength="20" inputMode="tel" autocomplete="tel" placeholder="(000) 000-0000" style="height:56px;padding:0 16px;border-radius:5px;border:1px solid rgba(32,30,29,.2);background:#fff;font-family:var(--font-body);font-size:16px;color:#201e1d;outline:none;width:100%;box-sizing:border-box;transition:border-color .3s,box-shadow .3s" style-focus="border-color:var(--color-accent);box-shadow:0 0 0 3px rgba(236,48,19,.15)"></label>
+            <label style="display:flex;flex-direction:column;gap:8px;min-width:0"><span style="font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--color-neutral-700)">Class</span><select name="class" value="{{ bkClass }}" onChange="{{ bkClassChange }}" style="height:56px;padding:0 16px;border-radius:5px;border:1px solid rgba(32,30,29,.2);background:#fff;font-family:var(--font-body);font-size:16px;color:#201e1d;outline:none;width:100%;box-sizing:border-box;transition:border-color .3s,box-shadow .3s;appearance:none;cursor:pointer;background:#fff url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2216%22 height=%2216%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23201e1d%22 stroke-width=%222%22><path d=%22m6 9 6 6 6-6%22/></svg>') no-repeat right 16px center" style-focus="border-color:var(--color-accent);box-shadow:0 0 0 3px rgba(236,48,19,.15)"><sc-for list="{{ bkClasses }}" as="o" hint-placeholder-count="3"><option value="{{ o }}">{{ o }}</option></sc-for></select></label>
+            <label style="display:flex;flex-direction:column;gap:8px;min-width:0"><span style="font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--color-neutral-700)">Preferred date</span><input name="date" type="date" min="{{ bkToday }}" required="{{ true }}" style="height:56px;padding:0 16px;border-radius:5px;border:1px solid rgba(32,30,29,.2);background:#fff;font-family:var(--font-body);font-size:16px;color:#201e1d;outline:none;width:100%;box-sizing:border-box;transition:border-color .3s,box-shadow .3s" style-focus="border-color:var(--color-accent);box-shadow:0 0 0 3px rgba(236,48,19,.15)"></label>
+            <label style="display:flex;flex-direction:column;gap:8px;min-width:0"><span style="font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--color-neutral-700)">Preferred time</span><input name="time" type="time" required="{{ true }}" style="height:56px;padding:0 16px;border-radius:5px;border:1px solid rgba(32,30,29,.2);background:#fff;font-family:var(--font-body);font-size:16px;color:#201e1d;outline:none;width:100%;box-sizing:border-box;transition:border-color .3s,box-shadow .3s" style-focus="border-color:var(--color-accent);box-shadow:0 0 0 3px rgba(236,48,19,.15)"></label>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <span style="font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--color-neutral-700)">Pass or membership</span>
+            <div data-m="form2" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:4px;padding:4px;border-radius:5px;background:#e6e4e4">
+              <sc-for list="{{ bkPasses }}" as="p" hint-placeholder-count="3">
+                <button type="button" onClick="{{ p.go }}" style="appearance:none;border:0;cursor:pointer;min-height:48px;padding:8px 12px;border-radius:5px;font-family:var(--font-body);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:{{ p.bg }};color:{{ p.fg }};box-shadow:{{ p.sh }};transition:background .3s,color .3s">{{ p.label }}</button>
+              </sc-for>
+            </div>
+          </div>
+          <label style="display:flex;flex-direction:column;gap:8px;min-width:0"><span style="font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--color-neutral-700)">Notes (optional)</span><textarea name="notes" maxLength="1000" rows="3" placeholder="Injuries, questions, anything we should know" style="height:56px;padding:0 16px;border-radius:5px;border:1px solid rgba(32,30,29,.2);background:#fff;font-family:var(--font-body);font-size:16px;color:#201e1d;outline:none;width:100%;box-sizing:border-box;transition:border-color .3s,box-shadow .3s;height:auto;padding:14px 16px;resize:vertical;line-height:1.5" style-focus="border-color:var(--color-accent);box-shadow:0 0 0 3px rgba(236,48,19,.15)"></textarea></label>
+          <button type="submit" data-magnetic="" style="appearance:none;border:0;cursor:pointer;display:flex;align-items:center;justify-content:space-between;height:64px;padding:0 22px 0 24px;border-radius:5px;background:linear-gradient(110deg,var(--color-accent-500) 0%,var(--color-accent) 40%,var(--color-accent-700) 100%);background-size:180% 100%;background-position:0% 0;color:#fff;font-family:var(--font-body);font-size:14px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;box-shadow:0 18px 40px -16px rgba(236,48,19,.9),inset 0 1px 0 rgba(255,255,255,.3);transition:background-position .6s" style-hover="background-position:100% 0">Send booking request<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg></button>
+        </form>
+      </sc-if>
+    </div>
+  </div>
+</section>
+
+<section id="how" data-m="cpad" data-screen-label="03 How it works" style="margin:12px;padding:128px 48px;border-radius:5px;background:linear-gradient(180deg,#141313 0%,#0b0a0a 100%);color:#f3f2f2;position:relative;overflow:hidden">
+  <div style="position:absolute;right:-20%;top:-30%;width:70%;height:90%;pointer-events:none;background:radial-gradient(closest-side,rgba(236,48,19,.22),rgba(236,48,19,0))"></div>
+  <div data-m="stack gap mb" data-t="stack" style="position:relative;display:grid;grid-template-columns:minmax(0,1fr) 420px;gap:48px;align-items:end;margin-bottom:64px">
+    <div style="display:flex;flex-direction:column;gap:32px">
+      <span data-reveal="" style="font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--color-accent-400);border-top:2px solid rgba(243,242,242,.6);padding-top:14px;max-width:320px">(02) How it works</span>
+      <h2 data-reveal="" data-fs="d1" style="margin:0;font-family:var(--font-heading);font-stretch:62%;font-weight:800;font-size:clamp(80px,9.4vw,148px);line-height:.84;text-transform:uppercase">Three<br><span style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;text-transform:none;font-stretch:100%;color:var(--color-accent)">steps.</span></h2>
+    </div>
+    <p data-reveal="" style="margin:0;font-size:18px;line-height:1.55;color:rgba(243,242,242,.72)">From request to mat — here's what happens after you hit send.</p>
+  </div>
+  <div style="position:relative;display:flex;flex-direction:column;border-bottom:1px solid rgba(243,242,242,.16)">
+    <sc-for list="{{ how }}" as="p" hint-placeholder-count="3">
+      <div data-reveal="" data-m="row" style="display:grid;grid-template-columns:72px minmax(0,5fr) minmax(0,4fr);align-items:center;gap:24px;padding:32px 0;border-top:1px solid rgba(243,242,242,.16)">
+        <span style="font-size:13px;font-weight:700;letter-spacing:.16em;color:var(--color-accent)">{{ p.n }}</span>
+        <span data-fs="d2" style="font-family:var(--font-heading);font-stretch:62%;font-weight:800;font-size:clamp(64px,6.6vw,104px);line-height:.92;text-transform:uppercase">{{ p.name }}</span>
+        <p style="margin:0;font-size:17px;line-height:1.6;color:rgba(243,242,242,.72)">{{ p.body }}</p>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<section id="book" data-m="cpad" data-screen-label="04 Membership CTA" style="position:relative;margin:12px;border-radius:5px;overflow:hidden;padding:128px 48px 56px;display:flex;flex-direction:column;gap:64px;color:#fff;background:linear-gradient(135deg,var(--color-accent-500) 0%,var(--color-accent) 38%,var(--color-accent-700) 78%,var(--color-accent-900) 100%)">
+  <div style="position:absolute;inset:0;pointer-events:none;background:radial-gradient(60% 60% at 15% 10%,rgba(255,255,255,.18) 0%,rgba(255,255,255,0) 70%)"></div>
+  <span style="position:relative;font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;border-top:2px solid #fff;padding-top:14px;width:320px;max-width:100%">(03) Coming often?</span>
+  <h2 data-reveal="" data-fs="dx" style="position:relative;margin:0;font-family:var(--font-heading);font-stretch:62%;font-weight:800;font-size:clamp(140px,16vw,250px);line-height:.8;text-transform:uppercase;letter-spacing:-.01em">Go<br>unlimited<span style="font-family:'Instrument Serif',serif;font-style:italic;font-weight:400;text-transform:none;font-stretch:100%">.</span></h2>
+  <div data-m="stack gap" style="position:relative;display:grid;grid-template-columns:minmax(0,1fr) 460px;gap:48px;align-items:end;border-top:2px solid rgba(255,255,255,.6);padding-top:28px">
+    <p data-fs="p" style="margin:0;font-size:22px;line-height:1.45;max-width:560px">Memberships start at $170/month for founders. Unlimited classes, every class on the schedule.</p>
+    <a href="Membership.dc.html" data-magnetic="" style="display:flex;align-items:center;justify-content:space-between;height:80px;padding:0 28px 0 32px;border-radius:5px;background:linear-gradient(110deg,#ffffff 0%,#f3f2f2 60%,var(--color-accent-200) 100%);color:var(--color-accent-800);font-size:16px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;box-shadow:0 24px 50px -20px rgba(77,23,14,.8)" style-hover="color:var(--color-accent-900)">See memberships<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg></a>
+  </div>
+</section>
+
+<footer data-footer="" data-m="footer" data-screen-label="05 Footer" style="position:relative;margin:12px;border-radius:5px;overflow:hidden;background:linear-gradient(180deg,#141313 0%,#070606 100%);color:#f3f2f2;padding:96px 48px 32px;min-height:860px;display:flex;flex-direction:column">
+  <div style="position:absolute;left:0;right:0;bottom:40px;display:flex;justify-content:center;pointer-events:none">
+    <div data-foot-bg="" data-fs="dx" style="font-family:var(--font-heading);font-stretch:62%;font-weight:900;font-size:clamp(200px,24vw,360px);line-height:.8;text-transform:uppercase;white-space:nowrap;letter-spacing:-.01em;background:linear-gradient(100deg,var(--color-accent-500) 0%,var(--color-accent) 35%,#3a1a14 75%,#201e1d 100%);-webkit-background-clip:text;background-clip:text;color:transparent;filter:blur(14px);opacity:.75">Bad Temper</div>
+  </div>
+  <div data-m="stack gap" style="position:relative;display:grid;grid-template-columns:minmax(0,1fr) 420px;gap:48px;align-items:start;padding-bottom:64px;border-bottom:2px solid rgba(243,242,242,.2)">
+    <a href="Bad%20Temper%20Home.dc.html" aria-label="Bad Temper — back to homepage" style="display:block;width:min(560px,100%)"><img src="assets/logo-dark.png" alt="Bad Temper — Est. 2026" style="width:100%;height:auto;display:block"></a>
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <span data-fs="d3" style="font-family:var(--font-heading);font-stretch:62%;font-weight:800;font-size:64px;line-height:.88;text-transform:uppercase">Your mat<br>is waiting.</span>
+      <a href="Bad%20Temper%20Home.dc.html#booking" data-magnetic="" style="display:flex;align-items:center;justify-content:space-between;height:64px;padding:0 22px 0 24px;border-radius:5px;background:linear-gradient(110deg,var(--color-accent-500) 0%,var(--color-accent) 40%,var(--color-accent-700) 100%);background-size:180% 100%;background-position:0% 0;color:#fff;font-size:14px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;box-shadow:0 18px 40px -16px rgba(236,48,19,.9),inset 0 1px 0 rgba(255,255,255,.3);transition:background-position .6s" style-hover="background-position:100% 0;color:#fff">Book now<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg></a>
+    </div>
+  </div>
+  <div data-m="two" style="position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px 24px;padding-top:40px;padding-bottom:48px">
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <span style="font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--color-accent-400)">Navigate</span>
+      <sc-for list="{{ nav }}" as="l" hint-placeholder-count="7"><a href="{{ l.href }}" style="font-size:16px;color:rgba(243,242,242,.85);width:max-content" style-hover="color:#fff">{{ l.label }}</a></sc-for>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <span style="font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--color-accent-400)">Location</span>
+      <span style="font-size:16px;line-height:1.55;color:rgba(243,242,242,.85)">1547 Arthur Kill Road<br>Staten Island, NY 10312</span>
+      <a href="https://www.google.com/maps/dir/?api=1&amp;destination=1547+Arthur+Kill+Road+Staten+Island+NY+10312" target="_blank" rel="noopener noreferrer" style="font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#f3f2f2;width:max-content;border-bottom:1px solid rgba(243,242,242,.4);padding-bottom:4px" style-hover="color:var(--color-accent-400);border-color:var(--color-accent-400)">Get directions</a>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <span style="font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--color-accent-400)">Hours</span>
+      <span style="font-size:16px;line-height:1.55;color:rgba(243,242,242,.85)">Weekdays: 5:30 AM – 9:00 PM<br>Weekends: 8:00 AM – 2:00 PM</span>
+      <span style="font-size:13px;color:rgba(243,242,242,.55)">Hours may vary.</span>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <span style="font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--color-accent-400)">Social</span>
+      <a href="https://instagram.com/badtemperstudio" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:10px;font-size:16px;color:rgba(243,242,242,.85);width:max-content" style-hover="color:#fff"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>@badtemperstudio</a>
+    </div>
+  </div>
+  <div data-m="col" style="position:relative;margin-top:auto;display:flex;justify-content:space-between;align-items:center;gap:16px;font-size:12px;letter-spacing:.08em;color:rgba(243,242,242,.6)">
+    <div style="display:flex;flex-wrap:wrap;gap:8px 24px"><span>© 2026 Bad Temper. All rights reserved.</span><a href="https://smartmarketingg.com" target="_blank" rel="noopener noreferrer" style="color:rgba(243,242,242,.7)" style-hover="color:#fff">Website by <span style="color:#f3f2f2;font-weight:700">Smart Marketing</span></a></div>
+    <div style="display:flex;gap:20px 28px;flex-wrap:wrap">
+      <a href="Privacy%20Policy.dc.html" style="color:rgba(243,242,242,.7)" style-hover="color:#fff">Privacy Policy</a>
+      <a href="Terms.dc.html" style="color:rgba(243,242,242,.7)" style-hover="color:#fff">Terms</a>
+      <a href="#top" style="display:inline-flex;align-items:center;gap:8px;color:#f3f2f2" style-hover="color:var(--color-accent-400)">Back to top<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 7-7 7 7"></path><path d="M12 19V5"></path></svg></a>
+    </div>
+  </div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;smoothScroll&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;},&quot;customCursor&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Motion&quot;},&quot;imageTreatment&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Black &amp; white&quot;,&quot;Color&quot;],&quot;default&quot;:&quot;Black &amp; white&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Imagery&quot;}}">
+class Component extends DCLogic {
+  state = { menu: false, bkClass: 'Temper Tantrum', bkPass: 0, bkSent: false, bkName: '' };
+  rootRef = React.createRef();
+  _cleanups = [];
+
+  componentDidMount() {
+    this._on(window, 'keydown', e => { if (e.key !== 'Escape') return; if (this.state.menu) { this.setState({ menu: false }); this.lenis && this.lenis.start(); } if (this.state.panel) { this.setState({ panel: false }); this.lenis && this.lenis.start(); } });
+    try { const sp = new URLSearchParams(location.search), qc = sp.get('class'), qp = parseInt(sp.get('pass'), 10); if (qc && ['Temper Tantrum', 'Crashout', 'Silent Treatment', 'Barrely Behaving'].includes(qc)) this.setState({ bkClass: qc }); if (qp >= 0 && qp <= 2) this.setState({ bkPass: qp }); } catch (e) {}
+    this._applyFilter();
+    let tries = 0;
+    const wait = () => {
+      if (window.gsap && window.ScrollTrigger && (window.Lenis || tries > 40)) this._init();
+      else if (tries++ < 160) this._waitT = setTimeout(wait, 50);
+    };
+    wait();
+  }
+  componentDidUpdate(pp) { if (pp && pp.imageTreatment !== this.props.imageTreatment) this._applyFilter(); }
+  componentWillUnmount() {
+    clearTimeout(this._waitT);
+    this._cleanups.forEach(f => f());
+    if (this.ctx) this.ctx.revert();
+    if (this.lenis) this.lenis.destroy();
+    if (this._tick && window.gsap) window.gsap.ticker.remove(this._tick);
+  }
+  _applyFilter() {
+    const r = this.rootRef.current; if (!r) return;
+    r.style.setProperty('--img-filter', (this.props.imageTreatment ?? 'Black & white') === 'Color' ? 'none' : 'grayscale(1) contrast(1.05)');
+  }
+  _on(el, ev, fn, opt) { el.addEventListener(ev, fn, opt); this._cleanups.push(() => el.removeEventListener(ev, fn, opt)); }
+
+  _init() {
+    const g = window.gsap, ST = window.ScrollTrigger, root = this.rootRef.current;
+    if (!root) return;
+    g.registerPlugin(ST);
+    const q = s => Array.from(root.querySelectorAll(s)), $ = s => root.querySelector(s);
+
+    this._reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if ((this.props.smoothScroll ?? true) && window.Lenis && !this._reduced) {
+      this.lenis = new window.Lenis({ lerp: 0.085, smoothWheel: true });
+      this.lenis.on('scroll', ST.update);
+      this._tick = t => this.lenis.raf(t * 1000);
+      g.ticker.add(this._tick); g.ticker.lagSmoothing(0);
+    }
+    this._on(root, 'click', e => {
+      const a = e.target.closest('a[href^="#"]'); if (!a) return;
+      const id = a.getAttribute('href'); if (id.length < 2) return;
+      const t = root.querySelector(id); if (!t) return;
+      e.preventDefault();
+      if (this.lenis) this.lenis.scrollTo(t, { duration: 1.6 });
+      else window.scrollTo({ top: t.getBoundingClientRect().top + window.scrollY, behavior: 'smooth' });
+    });
+
+    if (!this._reduced) this.ctx = g.context(() => {
+      g.timeline()
+        .fromTo('[data-hero-media]', { scale: 1.22 }, { scale: 1, duration: 2, ease: 'expo.out' })
+        .fromTo('[data-hero-title]', { clipPath: 'inset(0% 0% 100% 0%)', y: 90 }, { clipPath: 'inset(0% -20% -10% 0%)', y: 0, duration: 1.5, ease: 'expo.out' }, 0.1)
+        .from('[data-hero-eyebrow] > *', { y: 24, opacity: 0, stagger: 0.08, duration: 0.9, ease: 'power3.out' }, 0.35)
+        .from('[data-hero-copy] > *', { y: 36, opacity: 0, stagger: 0.12, duration: 1, ease: 'power3.out' }, 0.5)
+        .from('[data-nav]', { y: -40, opacity: 0, duration: 0.9, ease: 'power3.out' }, 0.3);
+      g.to('[data-hero-media]', { yPercent: 16, ease: 'none', scrollTrigger: { trigger: '#top', start: 'top top', end: 'bottom top', scrub: true } });
+
+      const nav = $('[data-nav]'); let hidden = false;
+      ST.create({ start: 0, end: 'max', onUpdate: s => {
+        const h = s.direction === 1 && s.scroll() > 500;
+        if (h !== hidden) { hidden = h; g.to(nav, { yPercent: h ? -170 : 0, duration: 0.6, ease: 'power3.out', overwrite: 'auto' }); }
+      } });
+
+      q('[data-reveal]').forEach(el => g.from(el, { y: 60, opacity: 0, duration: 1.2, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 90%', once: true } }));
+      q('[data-clip]').forEach(el => {
+        g.fromTo(el, { clipPath: 'inset(10% 6% 10% 6% round 5px)' }, { clipPath: 'inset(0% 0% 0% 0% round 5px)', ease: 'none', scrollTrigger: { trigger: el, start: 'top 98%', end: 'top 30%', scrub: true } });
+        const z = el.querySelector('[data-zoom]');
+        if (z) g.fromTo(z, { scale: 1.28 }, { scale: 1, ease: 'none', scrollTrigger: { trigger: el, start: 'top bottom', end: 'bottom top', scrub: true } });
+      });
+      q('[data-speed]').forEach(el => {
+        const s = parseFloat(el.dataset.speed) || 0.3;
+        g.fromTo(el, { y: s * 120 }, { y: -s * 120, ease: 'none', scrollTrigger: { trigger: el, start: 'top bottom', end: 'bottom top', scrub: true } });
+      });
+      const words = q('[data-word]');
+      if (words.length) g.fromTo(words, { opacity: 0.12 }, { opacity: 1, stagger: 0.1, ease: 'none', scrollTrigger: { trigger: '[data-words]', start: 'top 82%', end: 'bottom 50%', scrub: true } });
+
+      const foot = $('[data-footer]'), fb = $('[data-foot-bg]');
+      if (foot && fb) {
+        g.from(fb, { yPercent: 45, ease: 'none', scrollTrigger: { trigger: foot, start: 'top bottom', end: 'bottom bottom', scrub: true } });
+        const fx = g.quickTo(fb, 'x', { duration: 1.4, ease: 'power3' });
+        this._on(foot, 'mousemove', e => { const r = foot.getBoundingClientRect(); fx(((e.clientX - r.left) / r.width - 0.5) * -140); });
+      }
+    }, root);
+
+    if (window.matchMedia('(hover: hover)').matches) q('[data-magnetic]').forEach(el => {
+      const xTo = g.quickTo(el, 'x', { duration: 0.6, ease: 'power3' }), yTo = g.quickTo(el, 'y', { duration: 0.6, ease: 'power3' });
+      this._on(el, 'mousemove', e => { const r = el.getBoundingClientRect(); xTo((e.clientX - r.left - r.width / 2) * 0.22); yTo((e.clientY - r.top - r.height / 2) * 0.35); });
+      this._on(el, 'mouseleave', () => { xTo(0); yTo(0); });
+    });
+
+    if ((this.props.customCursor ?? true) && window.matchMedia('(hover: hover) and (min-width: 901px)').matches) {
+      const dot = $('[data-cursor]'), ring = $('[data-cursor-ring]');
+      g.set([dot, ring], { xPercent: -50, yPercent: -50 });
+      const dx = g.quickTo(dot, 'x', { duration: 0.12 }), dy = g.quickTo(dot, 'y', { duration: 0.12 });
+      const rx = g.quickTo(ring, 'x', { duration: 0.45, ease: 'power3' }), ry = g.quickTo(ring, 'y', { duration: 0.45, ease: 'power3' });
+      let shown = false;
+      this._on(window, 'mousemove', e => {
+        if (!shown) { shown = true; g.to([dot, ring], { opacity: 1, duration: 0.3 }); }
+        dx(e.clientX); dy(e.clientY); rx(e.clientX); ry(e.clientY);
+      });
+      this._on(root, 'mouseover', e => { const hot = !!e.target.closest('a,button'); g.to(ring, { scale: hot ? 1.9 : 1, backgroundColor: hot ? 'rgba(236,48,19,.12)' : 'rgba(236,48,19,0)', duration: 0.35, overwrite: 'auto' }); });
+    }
+
+    const refresh = () => ST.refresh();
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(refresh);
+    this._rt = setTimeout(refresh, 1500);
+    this._cleanups.push(() => clearTimeout(this._rt));
+  }
+
+  renderVals() {
+    const H = 'Bad%20Temper%20Home.dc.html';
+    const nav = [
+      ['Home', H], ['About', 'About.dc.html'], ['Classes', 'Classes.dc.html'], ['Membership', 'Membership.dc.html'],
+      ['Gallery', 'Gallery.dc.html'], ['Contact', 'Contact.dc.html'], ['Booking', 'Booking.dc.html']
+    ].map(([label, href]) => ({ label, href, color: label === 'Booking' ? 'var(--color-accent-400)' : '#f3f2f2' }));
+    const menu = { menuOpen: this.state.menu, openMenu: () => { this.setState({ menu: true }); this.lenis && this.lenis.stop(); }, closeMenu: () => { this.setState({ menu: false }); this.lenis && this.lenis.start(); } };
+    return {
+      rootRef: this.rootRef, nav, ...menu,
+      how: [
+        { n: '01', name: 'Request', body: 'Pick your class, date, time and pass, then send the form.' },
+        { n: '02', name: 'Confirm', body: 'The studio checks availability and emails you to confirm your spot.' },
+        { n: '03', name: 'Show up', body: 'Arrive a few minutes early with water and a towel. We\u2019ll take it from there.' }
+      ],
+      bkClasses: ['Temper Tantrum', 'Crashout', 'Silent Treatment', 'Barrely Behaving', 'Not sure yet'],
+      bkClass: this.state.bkClass, bkSent: this.state.bkSent, bkOpen: !this.state.bkSent, bkName: this.state.bkName,
+      bkClassChange: e => this.setState({ bkClass: e.target.value }),
+      bkPasses: ['First-time special', 'Drop-in / pack', 'Membership'].map((label, i) => { const on = this.state.bkPass === i; return { label, go: () => this.setState({ bkPass: i }), bg: on ? 'linear-gradient(110deg,var(--color-accent-500),var(--color-accent) 45%,var(--color-accent-700))' : 'transparent', fg: on ? '#fff' : '#201e1d', sh: on ? '0 8px 20px -10px rgba(236,48,19,.8)' : 'none' }; }),
+      bkToday: (() => { const d = new Date(); return new Date(d.getTime() - d.getTimezoneOffset() * 60000).toISOString().slice(0, 10); })(),
+      bkSubmit: e => {
+        e.preventDefault();
+        const f = e.target, el = f.elements;
+        if (el.company && el.company.value) { f.reset(); return; }
+        ['name', 'email', 'date', 'time'].forEach(k => el[k] && el[k].setCustomValidity(''));
+        if (el.name && !el.name.value.trim()) el.name.setCustomValidity('Please enter your name.');
+        if (el.phone && el.phone.value.trim() && el.phone.value.replace(/\D/g, '').length < 10) el.phone.setCustomValidity('Please enter a valid phone number.');
+        else if (el.phone) el.phone.setCustomValidity('');
+        if (!f.checkValidity()) { f.reportValidity(); return; }
+        const n = el.name.value.trim().split(' ')[0];
+        this.setState({ bkSent: true, bkName: n || 'there' });
+      },
+      bkReset: () => this.setState({ bkSent: false })
+    };
+  }
+}
+</script>
+</body>
+</html>
